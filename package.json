@@ -1,0 +1,41 @@
+{
+    "name": "many-widgets",
+    "package_version": 2,
+    "version": "1.0.0",
+    "description": "Here are many widgets for you. :)",
+    "author": "la vie est belle",
+    "main": "browser.js",
+
+    "panels": {
+        "default": {
+            "title": "widgets panel",
+            "type": "dockable",
+            "main": "./panels/default/default.js",
+            "icon": "./static/icons/default.png",
+            "size": {
+                "height": 500 
+            }
+        }
+    },
+
+    "contributions": {
+        "menu": [
+            {
+                "path": "i18n:menu.extension",
+                "label": "Many Widgets",
+                "icon": "./static/icons/default.png"
+            },
+            {
+                "path": "i18n:menu.extension/Many Widgets",
+                "label": "open",
+                "message": "open-panel"
+            }
+        ],
+
+        "messages": {
+            "open-panel": {
+                "methods": ["openPanel"]
+            }
+        }
+    }
+}

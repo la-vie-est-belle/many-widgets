@@ -1,0 +1,29 @@
+header {
+    padding: 10px;
+    color: #f90; 
+    text-align: center;
+}
+
+#app {
+    height: 500px;
+    overflow: scroll;
+}
+
+.widget-style {
+    border-radius: 2px;
+    border-color: gray;
+}
+
+.top-area-title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.top-area-btn {
+    float: right;
+}
+
+.top-area-btn ui-button {
+    color: white;
+    background-color: tomato;
+}

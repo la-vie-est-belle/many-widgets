@@ -1,0 +1,55 @@
+<div id="default-panel">
+    <header>
+        <ui-icon value="widget" style="font-size: 32px;"></ui-icon>
+        <h2>Many Widgets</h2>
+    </header>
+    
+    <div id="app">
+        <ui-section v-for="category in allWidgets" :key="category.categoryId" class="config" :header="category.categoryName" expand>
+            <div v-for="widget in category.widgets" :key="widget.widgetId" class="widget-style">
+                <!-- top area is for title and button -->
+                <div class="top-area">
+                    <span class="top-area-title">
+                        <ui-label>{{ widget.widgetName }}</ui-label>
+                    </span>
+
+                    <span class="top-area-btn">
+                        <ui-button @click="createComponentsForWidget(widget.widgetName)">Use</ui-button>
+                    </span>
+                </div>
+
+                <!-- middle area is for brief intro -->
+                <div class="middle-area">
+                    <ui-label>
+                        {{ widget.intro }}
+                    </ui-label>
+                </div>
+
+                <!-- middle area is for demo, usage and suggestions -->
+                <div class="bottom-area">
+                    <ui-section class="config" header="Demo">
+                        <ui-label style="text-align: justify;">
+                            You may click the link or scan the QR code to view the effect of widget {{ widget.widgetName }}.
+                        </ui-label>
+                        <div style="text-align: center;">
+                            <ui-link>{{ widget.exampleLink }}</ui-link>
+                            <ui-qrcode :value="widget.exampleLink"></ui-qrcode>
+                        </div>
+                    </ui-section>
+
+                    <ui-section class="config" header="How to use">
+                        <ui-code language="css">
+                            {{ widget.usage }}
+                        </ui-code>
+                    </ui-section>
+
+                    <ui-section class="config" header="Suggestions">
+                        <ui-textarea placeholder="Thank you for your suggestions."></ui-textarea>
+                        <ui-button>Send</ui-button>
+                    </ui-section>
+                    <br />
+                </div>
+            </div>
+        </ui-section>
+    </div>
+</div>
