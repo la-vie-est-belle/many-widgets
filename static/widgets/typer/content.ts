@@ -1,8 +1,8 @@
-import { _decorator, Component, Label, CCInteger, CCFloat } from 'cc';
+import { _decorator, Component, Label, CCFloat } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('Typer')
-export class Typer extends Component {
+@ccclass('MwTyper')
+export class MwTyper extends Component {
     @property({type: CCFloat})
     scheduleInterval: number = 0.1;
 
