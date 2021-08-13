@@ -1,7 +1,7 @@
 import { _decorator, Component, Label, CCFloat } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('MwTyper')
+@ccclass('MWTyper')
 export class MwTyper extends Component {
     @property({type: CCFloat})
     scheduleInterval: number = 0.1;

@@ -38,7 +38,7 @@ exports.ready = function() {
             return {
                 allWidgets: [
                     {categoryId: 1, categoryName: "Label", widgets: [
-                        {widgetId: 1, widgetName: "typer", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: "Typer", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
                         {widgetId: 2, widgetName: "typer2", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")}
                     ]},
                     {categoryId: 2, categoryName: "Button", widgets: [
@@ -50,11 +50,10 @@ exports.ready = function() {
         
         methods: {
             createComponentsForWidget(widgetName) {
-                // this.createFolderForWidget(widgetName);
 
                 switch (widgetName) {
                     case this.allWidgets[0].widgets[0].widgetName:
-                        typer.createComponentsForTyper(widgetName);
+                        typer.createTyper(widgetName);
                         break;
                     case 2:
                         break;
