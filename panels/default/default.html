@@ -38,14 +38,7 @@
                     </ui-section>
 
                     <ui-section class="config" header="How to use">
-                        <ui-code language="css">
-                            {{ widget.usage }}
-                        </ui-code>
-                    </ui-section>
-
-                    <ui-section class="config" header="Suggestions">
-                        <ui-textarea placeholder="Thank you for your suggestions."></ui-textarea>
-                        <ui-button>Send</ui-button>
+                        <div v-html="widget.usage"></div>
                     </ui-section>
                     <br />
                 </div>

@@ -1,6 +1,6 @@
 const { join } = require('path');
 const { readFileSync, existsSync, mkdirSync  } = require('fs');
-const typer = require('../../static/widgets/typer/methods');
+const Typer = require('../../static/widgets/typer/methods');
 const Vue = require('../../static/third-modules/vue');
 const packageJSON = require('../../package.json');
 
@@ -38,8 +38,8 @@ exports.ready = function() {
             return {
                 allWidgets: [
                     {categoryId: 1, categoryName: "Label", widgets: [
-                        {widgetId: 1, widgetName: "Typer", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: "typer2", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")}
+                        {widgetId: 1, widgetName: "Typer", intro: "Qicuk set-up of typer effect.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/Typer/", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: "Bullet Screen", intro: "Qicuk set-up of bullet screen.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")}
                     ]},
                     {categoryId: 2, categoryName: "Button", widgets: [
                         {widgetId: 1, widgetName: "typer", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")}
@@ -53,7 +53,7 @@ exports.ready = function() {
 
                 switch (widgetName) {
                     case this.allWidgets[0].widgets[0].widgetName:
-                        typer.createTyper(widgetName);
+                        Typer.create(widgetName);
                         break;
                     case 2:
                         break;
@@ -61,16 +61,6 @@ exports.ready = function() {
                         break;
                 }
             },
-
-            createFolderForWidget(widgetName) {
-                /*
-                    create a special folder for a widget
-                    all assests of this widget will be put here
-                */
-                let url = "db://assets/" + packageJSON.name + "/" + widgetName;
-                Editor.Message.request("asset-db", "create-asset", url);
-            },
-
         },
 
         computed: {

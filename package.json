@@ -13,7 +13,7 @@
             "main": "./panels/default/default.js",
             "icon": "./static/icons/default.png",
             "size": {
-                "height": 500 
+                "height": 600 
             }
         }
     },

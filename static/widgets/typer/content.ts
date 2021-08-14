@@ -10,8 +10,14 @@ export class MwTyper extends Component {
     private _defaultString: string = '';
     private _scheduleCount: number = 0;
 
-    start () {
+    start() {
+        this._changeLayer();
         this.go();
+    }
+
+    private _changeLayer() {
+        // change the layer to UI_2D
+        this.node.layer = 1 << 25;
     }
 
     go() {

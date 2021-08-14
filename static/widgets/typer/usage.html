@@ -1,0 +1,48 @@
+<html>
+    <header>
+        <style>
+            strong {
+                color: #f90; 
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            code {
+                color: #f90;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h3>Step 1:</h3>
+            <p>Click the use button. Now you will find the <strong>MW Typer node</strong> in the Hierarchy window and the <strong>MW_Typer script</strong> in the assets.</p>
+        </div>
+        <br />
+        
+        <div>
+            <h3>Step 2:</h3>
+            <p>Drag the MW Typer node to under the Canvas. If there is no Canvas, please create one. Now, run the project and you will see the typer effect.</p>
+        </div>
+        <br />
+
+        <div>
+            <h3>Step 3:</h3>
+            <p>To speed up or slow down the typing, you may adjust the <code>scheduleInterval</code> in the Inspector tab or just call <code>setScheduleInterval()</code> in your code.</p>
+            <p>You may call <code>go()</code> to show the typer effect whenever you like. (To do this, remember to delete <code>this.go();</code> in MW_Typer.ts)</p>
+            <p>Here is a snippet:</p>
+            <ui-code language="typescript">
+                @property({type: Node})
+                MWTyperNode: Node = null!
+            
+                start () {
+                    let MWTyperComponent = this.MWTyperNode.getComponent(MwTyper)!;
+                    MWTyperComponent.setScheduleInterval(0.8);
+                    MWTyperComponent.go();
+                }
+            </ui-code>
+        </div>
+    </body>
+</html>

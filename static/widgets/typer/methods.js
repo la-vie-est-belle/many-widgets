@@ -2,8 +2,8 @@ const { join } = require('path');
 const { readFileSync, existsSync, mkdirSync, writeFileSync, writeFile  } = require('fs');
 const packageJSON = require('../../../package.json');
 
-var typer = {
-    createTyper: function(widgetName) {
+var Typer = {
+    create: function(widgetName) {
         let self = this;
         Promise.resolve().then(function() {
             return self.createScriptForTyper(widgetName);
@@ -38,8 +38,10 @@ var typer = {
         */
         Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: "cc.Label"});
 
-
-        /* Must use setTimeout. Otherwise, the editor will report <fail to get class>. */
+        /* 
+        Must use setTimeout. 
+        Otherwise, the editor will report <fail to get class>. 
+        */
         setTimeout(function() {
             let componentName = "MW"+ widgetName;
             Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: componentName});
@@ -47,4 +49,4 @@ var typer = {
     }
 }
 
-module.exports = typer;
+module.exports = Typer;
