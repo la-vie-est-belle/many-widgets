@@ -2,7 +2,7 @@ import { _decorator, Component, Label, CCFloat } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('MWTyper')
-export class MwTyper extends Component {
+export class MWTyper extends Component {
     @property({type: CCFloat})
     scheduleInterval: number = 0.1;
 
@@ -28,6 +28,10 @@ export class MwTyper extends Component {
         this.schedule(this._typing, 
                     this.scheduleInterval, 
                     this._defaultString.length-1);
+    }
+
+    setScheduleInterval(seconds: number) {
+        this.scheduleInterval = seconds;
     }
 
     private _typing () {
