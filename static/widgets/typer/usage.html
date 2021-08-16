@@ -29,19 +29,22 @@
         <br />
 
         <div>
-            <h3>Step 3:</h3>
-            <p>To speed up or slow down the typing, you may adjust the <code>scheduleInterval</code> in the Inspector tab or just call <code>setScheduleInterval()</code> in your code.</p>
-            <p>You may call <code>go()</code> to show the typer effect whenever you like. (To do this, remember to delete <code>this.go();</code> in MW_Typer.ts)</p>
-            <p>Here is a snippet:</p>
+            <h3>API:</h3>
             <ui-code language="typescript">
-                @property({type: Node})
-                MWTyperNode: Node = null!
-            
-                start () {
-                    let MWTyperComponent = this.MWTyperNode.getComponent(MwTyper)!;
-                    MWTyperComponent.setScheduleInterval(0.8);
-                    MWTyperComponent.go();
-                }
+                /*
+                Show the typer effect.
+                */
+                show()
+
+                /*
+                Hide the typer effect.
+                */
+                hide()
+
+                /*
+                Adjust the typing speed.
+                */
+                setScheduleInterval(seconds: number)
             </ui-code>
         </div>
     </body>

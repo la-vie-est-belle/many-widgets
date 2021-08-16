@@ -2,7 +2,7 @@ const { join } = require('path');
 const { readFileSync, existsSync, mkdirSync, writeFileSync, writeFile  } = require('fs');
 const packageJSON = require('../../../package.json');
 
-var Typer = {
+var RollingNumber = {
     create: function(widgetName) {
         let self = this;
         Promise.resolve().then(function() {
@@ -12,6 +12,7 @@ var Typer = {
             return self.createNode(widgetName);
         })
         .then(function(newNodeUUID) {
+            self.createPrefab(widgetName);
             self.addComponentsForNode(newNodeUUID, widgetName);
         });
     },
@@ -31,12 +32,19 @@ var Typer = {
         return Editor.Message.request("scene", "create-node", {name: newNodeName});
     },
 
+    createPrefab: function(widgetName) {
+        let source = join(__dirname, "./assets/Child Layout.prefab");
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "Child Layout.prefab";
+        return Editor.Message.request("asset-db", "import-asset", source, target);
+    },
+
     addComponentsForNode: function(newNodeUUID, widgetName) {
         /*
         Add components for this node.
         Thought I could just use create-node to add components, but failed. Don't know why.
         */
-        Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: "cc.Label"});
+        Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: "cc.Layout"});
+        Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: "cc.Mask"});
 
         /* 
         Must use setTimeout. 
@@ -49,4 +57,4 @@ var Typer = {
     }
 }
 
-module.exports = Typer;
+module.exports = RollingNumber;

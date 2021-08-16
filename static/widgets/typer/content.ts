@@ -12,15 +12,17 @@ export class MWTyper extends Component {
 
     start() {
         this._changeLayer();
-        this.go();
+        this.show();
     }
 
     private _changeLayer() {
-        // change the layer to UI_2D
+        /*
+        Change the layer to UI_2D
+        */
         this.node.layer = 1 << 25;
     }
 
-    go() {
+    show() {
         this._label = this.node.getComponent(Label)!;
         this._defaultString = this._label.string;
         this._label.string = '';
@@ -28,6 +30,11 @@ export class MWTyper extends Component {
         this.schedule(this._typing, 
                     this.scheduleInterval, 
                     this._defaultString.length-1);
+    }
+
+    hide() {
+        this.unschedule(this._typing);
+        this.node.active = false;
     }
 
     setScheduleInterval(seconds: number) {
