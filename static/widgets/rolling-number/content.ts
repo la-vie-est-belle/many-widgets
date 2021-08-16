@@ -102,7 +102,7 @@ export class MWRollingNumber extends Component {
             this._isOk2Roll = true;
         }
         else {
-            console.log("Not a number!");
+            console.error("Not a number!");
             this._isOk2Roll = false;
         }
     }
@@ -139,7 +139,7 @@ export class MWRollingNumber extends Component {
             this._roll();
         }
         else {
-            console.log("Can not roll a NAN or the previous tween is not finished.")
+            console.error("Can not roll a NAN or the previous tween is not finished.")
         }
     }
 
