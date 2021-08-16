@@ -1,8 +1,9 @@
 const { join } = require('path');
-const { readFileSync, existsSync, mkdirSync  } = require('fs');
+const { readFileSync } = require('fs');
 const Typer = require('../../static/widgets/typer/methods');
 const BulletScreen = require('../../static/widgets/bullet-screen/methods');
 const RollingNumber = require('../../static/widgets/rolling-number/methods');
+const MovingBackground = require('../../static/widgets/moving-background/methods');
 const Vue = require('../../static/third-modules/vue');
 const packageJSON = require('../../package.json');
 
@@ -46,7 +47,10 @@ exports.ready = function() {
                         {widgetId: 0, widgetName: "Combo Box", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
                         {widgetId: 1, widgetName: "Spin Box", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")}
                     ]},
-                    {categoryId: 0, categoryName: "View", widgets: [
+                    {categoryId: 2, categoryName: "Sprite", widgets: [
+                        {widgetId: 0, widgetName: "Moving Background", intro: "Infinite Background movement.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/Moving%20Background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
+                    ]},
+                    {categoryId: 3, categoryName: "View", widgets: [
                         {widgetId: 0, widgetName: "Scale View", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")}
                     ]},
                 ]
@@ -57,6 +61,7 @@ exports.ready = function() {
             createComponentsForWidget(widgetName) {
 
                 switch (widgetName) {
+                    /* Label */
                     case this.allWidgets[0].widgets[0].widgetName:
                         Typer.create(widgetName.replace(/\s/g, ""));
                         break;
@@ -65,6 +70,11 @@ exports.ready = function() {
                         break;
                     case this.allWidgets[0].widgets[2].widgetName:
                         RollingNumber.create(widgetName.replace(/\s/g, ""))
+                        break;
+
+                    /* Sprite */
+                    case this.allWidgets[2].widgets[0].widgetName:
+                        MovingBackground.create(widgetName.replace(/\s/g, ""))
                         break;
                 }
             },

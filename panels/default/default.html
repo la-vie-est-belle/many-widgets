@@ -5,7 +5,7 @@
     </header>
     
     <div id="app">
-        <ui-section v-for="category in allWidgets" :key="category.categoryId" class="config" :header="category.categoryName" expand>
+        <ui-section v-for="category in allWidgets" :key="category.categoryId" class="config" :header="category.categoryName" :expand="category.categoryId==0">
             <div v-for="widget in category.widgets" :key="widget.widgetId" class="widget-style">
                 <!-- top area is for title and button -->
                 <div class="top-area">
