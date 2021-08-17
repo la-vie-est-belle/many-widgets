@@ -17,7 +17,7 @@ export class MWBulletScreen extends Component {
     isAllowRepeated: boolean = false;
 
     private _bullets = ["Many Widgets", "la vie est belle", "Hello, world!", "Cocos Creator", "Bullet Screen", "Life is beautiful", "Cocos Creator 3D"];
-    private _canvasUITrans: UITransformComponent = new UITransformComponent();
+    private _canvasUITransform: UITransformComponent = new UITransformComponent();
     private _lastIndex: number = Number.MAX_SAFE_INTEGER;
     private _bulletsPool: NodePool = new NodePool();
     private _isBulletScreenOn: boolean = true;
@@ -25,13 +25,20 @@ export class MWBulletScreen extends Component {
     private _bulletsArray: Node[] = [];
 
     start() {
-        // please make sure MWBulletScreen.ts is a component of the Canvas
-        this._canvasUITrans = this.node.getComponent(UITransformComponent)!;
-
-        this._spawnBullets();
+        this._init();
     }
 
-    _spawnBullets() {
+    private _init() {
+        this._initCanvasUITransform();
+        this._spawnBullets()
+    }
+
+    private _initCanvasUITransform() {
+        // please make sure MWBulletScreen.ts is a component of the Canvas
+        this._canvasUITransform = this.node.getComponent(UITransformComponent)!;
+    }
+
+    private _spawnBullets() {
         let num = Math.round(Math.random()*this.bulletsNum);      
 
         for (let i=0; i<num; i++) {
@@ -51,7 +58,7 @@ export class MWBulletScreen extends Component {
             // set random start pos y and move time
             let randomPosY = this._randomStartPosY();
             let randomMoveTime = this._randomMoveTime();
-            bullet.setPosition(this._canvasUITrans.width/2+10, randomPosY, 0);
+            bullet.setPosition(this._canvasUITransform.width/2+10, randomPosY, 0);
 
             // set bullet's content and color
             let label: Label = new Label()!;
@@ -60,12 +67,12 @@ export class MWBulletScreen extends Component {
             label.color = this._randomColor()!;
             
             // run the action
-            tween(bullet).to(randomMoveTime, {position: new Vec3(-this._canvasUITrans.width/2-500, randomPosY, 0)})
+            tween(bullet).to(randomMoveTime, {position: new Vec3(-this._canvasUITransform.width/2-500, randomPosY, 0)})
                          .call(() => {this._recycleBullet(bullet)}).start();
         }
     }
 
-    _recycleBullet(bullet: Node) {
+    private _recycleBullet(bullet: Node) {
         this._bulletsPool.put(bullet);
 
         // delete the prefab from the array
@@ -77,14 +84,14 @@ export class MWBulletScreen extends Component {
         }
     }
 
-    _randomColor() {
+    private _randomColor() {
         let red = Math.round(Math.random()*255);
         let green = Math.round(Math.random()*255);
         let blue = Math.round(Math.random()*255);
         return new Color(red, green, blue);
     }
 
-    _randomContent() {
+    private _randomContent() {
         let date = new Date();
         let seed = (date.getTime()*9301+49297) % 233280 / 233280;
         let index = Math.floor(seed * this._bullets.length);
@@ -106,13 +113,13 @@ export class MWBulletScreen extends Component {
         }
     }
 
-    _randomMoveTime() {
+    private _randomMoveTime() {
         let moveTime = Math.round(Math.random()*12) + 12;
         return moveTime;
     }
 
-    _randomStartPosY() {
-        let height = this._canvasUITrans.height;
+    private _randomStartPosY() {
+        let height = this._canvasUITransform.height;
         let y = (Math.round(Math.random()*height) - height/2) * 0.8;
         return y;
     }

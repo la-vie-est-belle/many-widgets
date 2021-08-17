@@ -1,0 +1,81 @@
+<html>
+    <header>
+        <style>
+            strong {
+                color: #f90; 
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            code {
+                color: #f90;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h3>Step 1:</h3>
+            <p>Click the use button. Now you will find the <strong>MW ComboBox node</strong> in the Hierarchy tab. This node is created from the <strong>MW ComboBox prefab</strong> in the assets.</p>
+        </div>
+        <br />
+        
+        <div>
+            <h3>Step 2:</h3>
+            <p>Drag the MW MovingBackground node to under the Canvas. If there is no Canvas, please create one. Now, run the project and you will see the combo box.</p>
+        </div>
+        <br />
+
+        <div>
+            <h3>API:</h3>
+            <ui-code language="typescript">
+                /*
+                Set the items in the combo box.
+                */
+                setItems(stringArray: string[])
+
+                /*
+                Get the current text shown on the combo box.
+                */
+                getCurrentText()
+
+                /*
+                Set the current text shown on the combo box.
+                Attention: you need to call setItems(array: string[]) to include this text into items.
+                */
+                setCurrentText()
+
+                /*
+                Set the sign when the combo box is open.
+                */
+                setOpenSign()
+
+                /*
+                Set the sign when the combo box is closed.
+                */
+                setClosedSign()
+            </ui-code>
+        </div>
+        <br />
+
+        <div>
+            <h3>Bug:</h3>
+            <ui-code language="typescript">
+                /*
+                Don't know why the items crowd together when _scrollView shows at the first time, 
+                but it get normal when _scrollView hides and shows again.
+        
+                The solution is to first let _scrollView show and hide for one time. 
+                However, this action can be noticed. You will see the blink of _scrollVien when the project starts.
+                */
+
+                private _bugFix() {
+                   this.scheduleOnce(()=>{this._scrollView.active=true;}, 0.1);
+                   this.scheduleOnce(()=>{this._scrollView.active=false;}, 0.2);
+                }
+            </ui-code>
+        </div>
+    </body>
+</html>

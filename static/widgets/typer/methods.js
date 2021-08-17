@@ -1,5 +1,5 @@
 const { join } = require('path');
-const { readFileSync, existsSync, mkdirSync, writeFileSync, writeFile  } = require('fs');
+const { readFileSync } = require('fs');
 const packageJSON = require('../../../package.json');
 
 var Typer = {

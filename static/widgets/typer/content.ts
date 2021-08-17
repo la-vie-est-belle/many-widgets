@@ -11,8 +11,12 @@ export class MWTyper extends Component {
     private _scheduleCount: number = 0;
 
     start() {
-        this._changeLayer();
+        this._init();
         this.show();
+    }
+
+    private _init() {
+        this._changeLayer();
     }
 
     private _changeLayer() {
