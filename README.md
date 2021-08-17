@@ -23,16 +23,22 @@ Supported Cocos Creator version: 3.x.
 ### Typer:
 Just click the the use button and you will get a label with typing effect.
 ![Typer](https://img-blog.csdnimg.cn/54a6ddb16434436d98989e32efc07861.gif)
+> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/Typer/
+
 <br/>
 
 ### Bullet Screen:
 Sometimes there are more steps after clicking the use button. However, these steps, for example—adding components, are just easy.
 ![Bullet Screen](https://img-blog.csdnimg.cn/44297765eea14e75a0d57f227c503a5e.gif)
+> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/Bullet%20Screen/
+
 <br/>
 
 ### Combo Box:
 Combo box is not very often seen in games, unless you want to use Cocos Creator for other kinds of apps.
 ![Combo Box](https://img-blog.csdnimg.cn/ca1027d8b52d421e9272668fb0248dc3.gif)
+> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/Combo%20Box/
+
 <br/>
 <br/>
 
