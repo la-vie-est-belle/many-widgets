@@ -47,7 +47,6 @@ exports.ready = function() {
                     ]},
                     {categoryId: 1, categoryName: "Button", widgets: [
                         {widgetId: 0, widgetName: "Combo Box", intro: "Quick set-up of combo box.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/Combo%20Box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: "Spin Box", intro: "Help you create the typer effect.", exampleLink: "http://baidu.com", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")}
                     ]},
                     {categoryId: 2, categoryName: "Sprite", widgets: [
                         {widgetId: 0, widgetName: "Moving Background", intro: "Infinite Background movement.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/Moving%20Background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
