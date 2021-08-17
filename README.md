@@ -8,6 +8,16 @@ Supported Cocos Creator version: 3.x.
 
 <br/>
 
+## Up to now:
+1. Typer
+2. Bullet Screen
+3. Rolling Number
+4. Combo Box
+5. Moving Background
+6. Zoom View
+
+<br>
+
 
 ## Examples:
 ### Typer:
