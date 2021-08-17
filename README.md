@@ -4,6 +4,8 @@
 This is a handy plugin that helps you create cocos creator widgets with special functions.
 
 Supported Cocos Creator version: 3.x.
+> You may refer to my blog if the following pics fail to load: https://pyqt5.blog.csdn.net/article/details/119762613
+
 <br/>
 <br/>
 
