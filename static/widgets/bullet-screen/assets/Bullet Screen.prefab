@@ -70,7 +70,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 38.03,
-      "height": 22.68
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -120,7 +120,7 @@
     "_isBold": false,
     "_isUnderline": false,
     "_underlineHeight": 2,
-    "_cacheMode": 0,
+    "_cacheMode": 2,
     "_id": ""
   },
   {
@@ -135,6 +135,6 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "e9SyBymfVE/6r3IeH63s2x"
+    "fileId": "eaBoOxcKxAK5zmRdQqFTK0"
   }
 ]

@@ -1,0 +1,61 @@
+<html>
+    <header>
+        <style>
+            strong {
+                color: #f90; 
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            code {
+                color: #f90;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h3>Step 1:</h3>
+            <p>Click the use button. Now you will find the <strong>MW SpinBox node</strong> in the Hierarchy tab. This node is created from the <strong>MW SpinBox prefab</strong> in the assets.</p>
+        </div>
+        <br />
+        
+        <div>
+            <h3>Step 2:</h3>
+            <p>Drag the MW SpinBox node to under the Canvas. If there is no Canvas, please create one. Now, run the project and you will see the spin box.</p>
+        </div>
+        <br />
+
+        <div>
+            <h3>API:</h3>
+            <ui-code language="typescript">
+                /*
+                Set the current value of the spin box.
+                */
+                setValue(num: number)
+
+                /*
+                Set the maximum value of the spin box.
+                */
+                setMaxValue(num: number)
+
+                /*
+                Set the minimum value of the spin box.
+                */
+                setMinValue(num: number)
+
+                /*
+                Set the sign when the combo box is open.
+                */
+                setOpenSign()
+
+                /*
+                Set the value step on each add or subtraction
+                */
+                setSingleStep(num: number)
+            </ui-code>
+        </div>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Prefab, tween, Color, Label, UITransformComponent, NodePool, Vec3, CCFloat, instantiate, CCInteger, CCBoolean, macro } from 'cc';
+import { _decorator, Component, Node, Prefab, tween, Color, Label, UITransformComponent, NodePool, Vec3, CCFloat, instantiate, CCInteger, CCBoolean, macro, find, UITransform } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('MWBulletScreen')
@@ -8,7 +8,7 @@ export class MWBulletScreen extends Component {
     bulletScreenPrefab: Prefab = null!; 
 
     @property({type: CCFloat})
-    spawnInterval: number = 8;
+    spawnInterval: number = 3;
 
     @property({type: CCInteger})
     bulletsNum: number = 5;
@@ -17,7 +17,7 @@ export class MWBulletScreen extends Component {
     isAllowRepeated: boolean = false;
 
     private _bullets = ["Many Widgets", "la vie est belle", "Hello, world!", "Cocos Creator", "Bullet Screen", "Life is beautiful", "Cocos Creator 3D"];
-    private _canvasUITransform: UITransformComponent = new UITransformComponent();
+    private _nodeUITransform: UITransform = new UITransform();
     private _lastIndex: number = Number.MAX_SAFE_INTEGER;
     private _bulletsPool: NodePool = new NodePool();
     private _isBulletScreenOn: boolean = true;
@@ -29,13 +29,19 @@ export class MWBulletScreen extends Component {
     }
 
     private _init() {
-        this._initCanvasUITransform();
+        this._initUITransform();
         this._spawnBullets()
     }
 
-    private _initCanvasUITransform() {
-        // please make sure MWBulletScreen.ts is a component of the Canvas
-        this._canvasUITransform = this.node.getComponent(UITransformComponent)!;
+    private _initUITransform() {
+        /*
+        Please make sure there is a Canvas node,
+        and the Bullet Screen should be a child of the Canvas.
+        */
+        let canvas = this.node.parent;
+        let canvasUITransform = canvas?.getComponent(UITransform)!;
+        this._nodeUITransform = this.node.getComponent(UITransform)!;
+        this._nodeUITransform.setContentSize(canvasUITransform.contentSize.width, canvasUITransform.contentSize.height);
     }
 
     private _spawnBullets() {
@@ -58,7 +64,7 @@ export class MWBulletScreen extends Component {
             // set random start pos y and move time
             let randomPosY = this._randomStartPosY();
             let randomMoveTime = this._randomMoveTime();
-            bullet.setPosition(this._canvasUITransform.width/2+10, randomPosY, 0);
+            bullet.setPosition(this._nodeUITransform.width/2+10, randomPosY, 0);
 
             // set bullet's content and color
             let label: Label = new Label()!;
@@ -67,7 +73,7 @@ export class MWBulletScreen extends Component {
             label.color = this._randomColor()!;
             
             // run the action
-            tween(bullet).to(randomMoveTime, {position: new Vec3(-this._canvasUITransform.width/2-500, randomPosY, 0)})
+            tween(bullet).to(randomMoveTime, {position: new Vec3(-this._nodeUITransform.width/2-500, randomPosY, 0)})
                          .call(() => {this._recycleBullet(bullet)}).start();
         }
     }
@@ -119,7 +125,7 @@ export class MWBulletScreen extends Component {
     }
 
     private _randomStartPosY() {
-        let height = this._canvasUITransform.height;
+        let height = this._nodeUITransform.height;
         let y = (Math.round(Math.random()*height) - height/2) * 0.8;
         return y;
     }

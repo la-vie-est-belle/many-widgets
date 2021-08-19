@@ -6,8 +6,8 @@ const RollingNumber = require('../../static/widgets/rolling-number/methods');
 const MovingBackground = require('../../static/widgets/moving-background/methods');
 const ZoomView = require('../../static/widgets/zoom-view/methods');
 const ComboBox = require('../../static/widgets/combo-box/methods');
+const SpinBox = require('../../static/widgets/spin-box/methods');
 const Vue = require('../../static/third-modules/vue');
-const packageJSON = require('../../package.json');
 
 // panel event listener
 exports.listeners = {
@@ -47,6 +47,7 @@ exports.ready = function() {
                     ]},
                     {categoryId: 1, categoryName: "Button", widgets: [
                         {widgetId: 0, widgetName: "Combo Box", intro: "Quick set-up of combo box.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/Combo%20Box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: "Spin Box", intro: "Quick set-up of spin box.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/Spin%20Box/", usage: readFileSync(join(__dirname, "../../static/widgets/spin-box/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 2, categoryName: "Sprite", widgets: [
                         {widgetId: 0, widgetName: "Moving Background", intro: "Infinite Background movement.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/Moving%20Background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
@@ -76,6 +77,9 @@ exports.ready = function() {
                     /* Button */
                     case this.allWidgets[1].widgets[0].widgetName:
                         ComboBox.create(widgetName.replace(/\s/g, ""))
+                        break;
+                    case this.allWidgets[1].widgets[1].widgetName:
+                        SpinBox.create(widgetName.replace(/\s/g, ""))
                         break;
 
                     /* Sprite */

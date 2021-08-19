@@ -2,7 +2,7 @@ const { join } = require('path');
 const { readFileSync } = require('fs');
 const packageJSON = require('../../../package.json');
 
-var BulletSceen = {
+var SpinBox = {
     create: function(widgetName) {
         let self = this;
         Promise.resolve().then(function() {
@@ -11,8 +11,8 @@ var BulletSceen = {
         .then(function() {
             return self.createPrefab(widgetName);
         })
-        .then(function() {
-            return self.createNode(widgetName);
+        .then(function(assetData) {
+            return self.createNode(assetData.uuid, widgetName);
         })
         .then(function(newNodeUUID) {
             self.addComponentsForNode(newNodeUUID, widgetName);
@@ -26,19 +26,18 @@ var BulletSceen = {
     },
 
     createPrefab: function(widgetName) {
-        let source = join(__dirname, "./assets/Bullet Screen.prefab");
-        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "Bullet Screen.prefab";
+        let source = join(__dirname, "./assets/MW SpinBox.prefab");
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "MW SpinBox.prefab";
         return Editor.Message.request("asset-db", "import-asset", source, target);
     },
 
-
-    createNode: function(widgetName) {
+    createNode: function(assetUUID, widgetName) {
         /* 
         This new node will be added under the currently selected node.
         If no node selected, scene will the new node's parent.
         */
         let newNodeName = "MW " + widgetName;
-        return Editor.Message.request("scene", "create-node", {name: newNodeName});
+        return Editor.Message.request("scene", "create-node", {name: newNodeName, assetUuid: assetUUID});
     },
 
     addComponentsForNode: function(newNodeUUID, widgetName) {
@@ -60,4 +59,4 @@ var BulletSceen = {
     }
 }
 
-module.exports = BulletSceen;
+module.exports = SpinBox;
