@@ -72,6 +72,8 @@ Combo box is not very often seen in games, unless you want to use Cocos Creator 
 - github link: https://la-vie-est-belle.github.io/many-widgets-demo/Spin%20Box/
 - video link: https://www.bilibili.com/video/BV16q4y1S7RH/
 
+<br/>
+<br/>
 
 ## Docs:
 You may find the `demo link` and `How to use` sections in the plugin panel.
