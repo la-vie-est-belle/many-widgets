@@ -4,7 +4,7 @@ const { ccclass, property } = _decorator;
 @ccclass('MWTyper')
 export class MWTyper extends Component {
     @property({type: CCFloat})
-    scheduleInterval: number = 0.1;
+    typeInterval: number = 0.1;
 
     private _label: Label = new Label();
     private _defaultString: string = '';
@@ -32,7 +32,7 @@ export class MWTyper extends Component {
         this._label.string = '';
 
         this.schedule(this._typing, 
-                    this.scheduleInterval, 
+                    this.typeInterval, 
                     this._defaultString.length-1);
     }
 
@@ -41,8 +41,8 @@ export class MWTyper extends Component {
         this.node.active = false;
     }
 
-    setScheduleInterval(seconds: number) {
-        this.scheduleInterval = seconds;
+    setTypeInterval(seconds: number) {
+        this.typeInterval = seconds;
     }
 
     private _typing () {

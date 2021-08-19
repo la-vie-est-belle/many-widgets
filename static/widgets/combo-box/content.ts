@@ -12,12 +12,14 @@ export class MWComboBox extends Component {
     private _btnSign: Node = new Node();
     private _scrollView: Node = new Node();
     private _content: Node = new Node();
-    private _firstItem: Node = new Node();
+    private _item: Node = new Node();
+
+    onLoad() {
+        this._init();
+    }
 
     start () {
-        this._init();
-        this._bugFix();
-        this.setItems(["Many Widgets", "Cocos Creator", "Cocos Creator 3D", "la vie est belle", "Hello, world!"]);
+
     }
 
     private _init() {
@@ -33,12 +35,12 @@ export class MWComboBox extends Component {
         this._btnSign = this.node.children[1];
         this._scrollView = this.node.children[2];
         this._content = this._scrollView.children[0].children[0];
-        this._firstItem = this._content.children[0];
+        this._item = instantiate(this._content.children[0]);
+        this._content.removeAllChildren();
     }
 
     private _initEvent() {
         this.node.on(Button.EventType.CLICK, this._openCloseComboBox, this);
-        this._firstItem.on(Button.EventType.CLICK, this._itemClicked, this);
     }
 
     private _bugFix() {
@@ -54,30 +56,29 @@ export class MWComboBox extends Component {
     }
 
     setItems(stringArray: string[]) {
-        this._itemsTextArray = stringArray;
         this._recycle();
+        this._itemsTextArray = stringArray;
 
         this.setCurrentText(this._itemsTextArray[0]);
-        this._setItemText(this._firstItem, this._itemsTextArray[0]);
-
         this._spawnItems();
+
+        this._bugFix();
     }
 
     private _recycle() {
         /*
-        Delete all children except _firstItem of _content node.
+        Delete all children of _content node.
         */
-        for (let i=1; i<this._content.children.length; i++) {
-            this._content.children[i].removeFromParent();
-        }
+        this._itemsTextArray = [];
+        this._content.removeAllChildren();
     }
 
     private _spawnItems() {
-        for(let i=0; i<this._itemsTextArray.length-1; i++) {
+        for(let i=0; i<this._itemsTextArray.length; i++) {
             let item = new Node();
-            item = instantiate(this._firstItem);
+            item = instantiate(this._item);
             this._content.addChild(item);
-            this._setItemText(item, this._itemsTextArray[i+1]);
+            this._setItemText(item, this._itemsTextArray[i]);
             item.on(Button.EventType.CLICK, this._itemClicked, this);
         }
     }
