@@ -45,30 +45,37 @@ Combo box is not very often seen in games, unless you want to use Cocos Creator 
 
 ## Demos:
 1. Typer
+<br/>
 github link: https://la-vie-est-belle.github.io/many-widgets-demo/Combo%20Box/
 video link: https://www.bilibili.com/video/BV1df4y137gY/
 
 2. Bullet Screen
+<br/>
 github link: https://la-vie-est-belle.github.io/many-widgets-demo/Bullet%20Screen/
 video link: https://www.bilibili.com/video/BV1g341167jA/
 
 3. Rolling Number
+<br/>
 github link: https://la-vie-est-belle.github.io/many-widgets-demo/Rolling%20Number/
 video link: https://www.bilibili.com/video/BV1jP4y1s7DY/
 
 4. Combo Box
+<br/>
 github link: https://la-vie-est-belle.github.io/many-widgets-demo/Combo%20Box/
 video link: https://www.bilibili.com/video/BV113411q7vJ/
 
 5. Moving Background
+<br/>
 github link: https://la-vie-est-belle.github.io/many-widgets-demo/Moving%20Background/
 video link: https://www.bilibili.com/video/BV1a64y1e7Wz/
 
 6. Zoom View
+<br/>
 github link: https://la-vie-est-belle.github.io/many-widgets-demo/Zoom%20View/
 video link: https://www.bilibili.com/video/BV1BM4y1L7wT/
 
 7. Spin Box
+<br/>
 github link: https://la-vie-est-belle.github.io/many-widgets-demo/Spin%20Box/
 video link: https://www.bilibili.com/video/BV16q4y1S7RH/
 
