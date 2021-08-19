@@ -15,6 +15,7 @@ Supported Cocos Creator version: 3.x.
 4. Combo Box
 5. Moving Background
 6. Zoom View
+7. Spin Box
 
 <br>
 
@@ -28,7 +29,7 @@ Just click the the use button and you will get a label with typing effect.
 <br/>
 
 ### Bullet Screen:
-Sometimes there are more steps after clicking the use button. However, these steps, for example—adding components, are just easy.
+Sometimes there are more steps after clicking the use button. However, these steps, for example, adding prefabs onto components, are just easy.
 ![Bullet Screen](https://img-blog.csdnimg.cn/44297765eea14e75a0d57f227c503a5e.gif)
 > demo link: https://la-vie-est-belle.github.io/many-widgets-demo/Bullet%20Screen/
 
