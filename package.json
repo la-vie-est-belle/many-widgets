@@ -1,7 +1,7 @@
 {
     "name": "many-widgets",
     "package_version": 2,
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Here are many widgets for you. :)",
     "author": "la vie est belle",
     "main": "browser.js",
@@ -37,6 +37,14 @@
             "open-panel": {
                 "methods": ["openPanel"]
             }
-        }
+        },
+
+        "shortcuts": [
+            {
+                "message": "open-panel",
+                "win": "ctrl+w",
+                "mac": "cmd+w"
+            }
+        ]
     }
 }
