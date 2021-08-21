@@ -59,6 +59,7 @@ var BeginnerGuide = {
 
             /* Add cc.Sprite for child node. */
             Editor.Message.request("scene", "create-component", {uuid: self.bgNodeUUID, component: "cc.Sprite"});
+            Editor.Message.request("scene", "create-component", {uuid: self.bgNodeUUID, component: "cc.BlockInputEvents"});
             Editor.Message.request("scene", "create-component", {uuid: self.instructionNodeUUID, component: "cc.Label"});
         }, 500);
     }

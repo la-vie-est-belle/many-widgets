@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, find, Label, UITransform, Sprite, Color } from 'cc';
+import { _decorator, Component, Node, find, Label, UITransform, Sprite, Color, Mask, assetManager, ImageAsset, SpriteFrame, Texture2D } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('MWBeginnerGuide')
@@ -24,6 +24,7 @@ export class MWBeginnerGuide extends Component {
     }
 
     private _init() {
+        this._changeLayer();
         this._initNode();
     }
 
@@ -36,6 +37,10 @@ export class MWBeginnerGuide extends Component {
 
     private _initGuideNode() {
         this._maskUITransform = this.node.getComponent(UITransform)!;
+        
+        let maskCompo = new Mask();
+        maskCompo = this.node.getComponent(Mask)!;
+        maskCompo.inverted = true;
     }
 
     private _initCanvasNode() {
@@ -58,6 +63,16 @@ export class MWBeginnerGuide extends Component {
     private _initInstructionNode() {
         this._instruction = this.node.children[1];
         this._instructionLabelComponent = this._instruction.getComponent(Label)!;
+    }
+
+    private _changeLayer() {
+        /*
+        Change the layer to UI_2D
+        */
+        this.node.layer = 1 << 25;
+        for (let i=0; i<this.node.children.length; i++) {
+            this.node.children[i].layer = 1 << 25;
+        }
     }
 
     private _setInstruction(str: string) {
