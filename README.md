@@ -16,6 +16,7 @@ Supported Cocos Creator version: 3.x.
 5. Moving Background
 6. Zoom View
 7. Spin Box
+8. Beginner Guide
 
 <br>
 
@@ -24,53 +25,57 @@ Supported Cocos Creator version: 3.x.
 ### Typer:
 Just click the the use button and you will get a label with typing effect.
 ![Typer](https://img-blog.csdnimg.cn/54a6ddb16434436d98989e32efc07861.gif)
-> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/Typer/
+> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/typer/
 
 <br/>
 
 ### Bullet Screen:
 Sometimes there are more steps after clicking the use button. However, these steps, for example, adding prefabs onto components, are just easy.
 ![Bullet Screen](https://img-blog.csdnimg.cn/44297765eea14e75a0d57f227c503a5e.gif)
-> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/Bullet%20Screen/
+> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/
 
 <br/>
 
 ### Combo Box:
 Combo box is not very often seen in games, unless you want to use Cocos Creator for other kinds of apps.
 ![Combo Box](https://img-blog.csdnimg.cn/ca1027d8b52d421e9272668fb0248dc3.gif)
-> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/Combo%20Box/
+> demo link: https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/
 
 <br/>
 <br/>
 
 ## Demos:
 1. Typer
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/Combo%20Box/
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/typer/
 - video link: https://www.bilibili.com/video/BV1df4y137gY/
 
 2. Bullet Screen
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/Bullet%20Screen/
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/
 - video link: https://www.bilibili.com/video/BV1g341167jA/
 
 3. Rolling Number
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/Rolling%20Number/
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number/
 - video link: https://www.bilibili.com/video/BV1jP4y1s7DY/
 
 4. Combo Box
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/Combo%20Box/
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/
 - video link: https://www.bilibili.com/video/BV113411q7vJ/
 
 5. Moving Background
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/Moving%20Background/
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/moving-background/
 - video link: https://www.bilibili.com/video/BV1a64y1e7Wz/
 
 6. Zoom View
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/Zoom%20View/
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/
 - video link: https://www.bilibili.com/video/BV1BM4y1L7wT/
 
 7. Spin Box
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/Spin%20Box/
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/spin-box/
 - video link: https://www.bilibili.com/video/BV16q4y1S7RH/
+
+8. Beginner Guide
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/
+- video link: https://www.bilibili.com/video/BV1g64y1e7R6/
 
 <br/>
 <br/>

@@ -2,6 +2,9 @@
     <header>
         <ui-icon value="widget" style="font-size: 32px;"></ui-icon>
         <h2>Many Widgets</h2>
+        <div>
+            <strong><ui-link value="https://github.com/la-vie-est-belle/many-widgets">Star me on GitHub :)</ui-link></strong>
+        </div>
     </header>
     
     <div id="app">
@@ -31,8 +34,14 @@
                         <ui-label style="text-align: justify;">
                             You may click the link or scan the QR code to view the effect of widget {{ widget.widgetName }}.
                         </ui-label>
+
                         <div style="text-align: center;">
-                            <ui-link>{{ widget.exampleLink }}</ui-link>
+                            <strong><ui-link :value="widget.videoLink">Video Demo</ui-link></strong>
+                            &nbsp;
+                            <strong><ui-link :value="widget.exampleLink">GitHub Demo</ui-link></strong>
+                        </div>
+
+                        <div style="text-align: center;">
                             <ui-qrcode :value="widget.exampleLink"></ui-qrcode>
                         </div>
                     </ui-section>

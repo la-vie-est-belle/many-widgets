@@ -42,20 +42,20 @@ exports.ready = function() {
             return {
                 allWidgets: [
                     {categoryId: 0, categoryName: "Label", widgets: [
-                        {widgetId: 0, widgetName: "Typer", intro: "Qicuk set-up of a typer effect.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/typer/", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: "Bullet Screen", intro: "Qicuk set-up of a bullet screen.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/", usage: readFileSync(join(__dirname, "../../static/widgets/bullet-screen/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: "Rolling Number", intro: "Qicuk set-up of a rolling number.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/rolling-number/usage.html"), "utf-8")}
+                        {widgetId: 0, widgetName: "Typer", intro: "Qicuk set-up of a typer effect.", videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/typer/", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: "Bullet Screen", intro: "Qicuk set-up of a bullet screen.", videoLink: "https://www.bilibili.com/video/BV1g341167jA/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/", usage: readFileSync(join(__dirname, "../../static/widgets/bullet-screen/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: "Rolling Number", intro: "Qicuk set-up of a rolling number.", videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/rolling-number/usage.html"), "utf-8")}
                     ]},
                     {categoryId: 1, categoryName: "Button", widgets: [
-                        {widgetId: 0, widgetName: "Combo Box", intro: "Quick set-up of a combo box.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: "Spin Box", intro: "Quick set-up of a spin box.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/spin-box/", usage: readFileSync(join(__dirname, "../../static/widgets/spin-box/usage.html"), "utf-8")},
+                        {widgetId: 0, widgetName: "Combo Box", intro: "Quick set-up of a combo box.", videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: "Spin Box", intro: "Quick set-up of a spin box.", videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/spin-box/", usage: readFileSync(join(__dirname, "../../static/widgets/spin-box/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 2, categoryName: "Sprite", widgets: [
-                        {widgetId: 0, widgetName: "Moving Background", intro: "Infinite Background movement.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
+                        {widgetId: 0, widgetName: "Moving Background", intro: "Infinite Background movement.", videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 3, categoryName: "View", widgets: [
-                        {widgetId: 0, widgetName: "Zoom View", intro: "Qucik set-up of a zoom view.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: "Beginner Guide", intro: "Qucik set-up of a beginner guide.", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/beginner-guide/usage.html"), "utf-8")}
+                        {widgetId: 0, widgetName: "Zoom View", intro: "Qucik set-up of a zoom view.", videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: "Beginner Guide", intro: "Qucik set-up of a beginner guide.", videoLink: "https://www.bilibili.com/video/BV1g64y1e7R6/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/beginner-guide/usage.html"), "utf-8")}
                     ]},
                 ]
             }
