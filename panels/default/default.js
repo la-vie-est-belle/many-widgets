@@ -78,7 +78,7 @@ exports.ready = function() {
         methods: {
             checkUpdate() {
                 let self = this;
-                axios.get('https://la-vie.gitee.io/many-widgets/package.json')
+                axios.get('https://la-vie.gitee.io/many-widgets/package.json', {headers: {'Cache-Control': 'no-cache'}})
                      .then(function(response) {
                          let remoteVersion = response.data.version;
                          if (self.currentVersion != remoteVersion) {
