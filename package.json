@@ -16,6 +16,16 @@
                 "height": 680,
                 "width": 400
             }
+        },
+
+        "settings": {
+            "title": "settings panel",
+            "main": "./panels/settings/settings.js",
+            "icon": "./static/icons/default.png",
+            "size": {
+                "height": 235,
+                "width": 400
+            }
         }
     },
 

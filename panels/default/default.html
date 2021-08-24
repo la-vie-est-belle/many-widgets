@@ -1,13 +1,26 @@
-<div id="default-panel">
+<div id="app">
     <header>
-        <ui-icon value="widget" style="font-size: 32px;"></ui-icon>
-        <h2>Many Widgets</h2>
-        <div>
-            <strong><ui-link value="https://github.com/la-vie-est-belle/many-widgets">Star me on GitHub :)</ui-link></strong>
+        <div class="title">
+            <div>
+                <ui-icon value="widget" style="font-size: 32px;"></ui-icon>
+                <h2>Many Widgets</h2>
+            </div>
+           
+            <div>
+                <strong><ui-link value="https://github.com/la-vie-est-belle/many-widgets">Star me on GitHub :)</ui-link></strong>
+            </div>
         </div>
+
+        <div id="version">
+            <ui-label>v{{ currentVersion }}</ui-label>
+        </div>
+
+        <!-- <div id="settings-btn" @click="showSettings">
+            <ui-icon value="setting"></ui-icon>
+        </div> -->
     </header>
     
-    <div id="app">
+    <div id="content">
         <ui-section v-for="category in allWidgets" :key="category.categoryId" class="config" :header="category.categoryName" :expand="category.categoryId==0">
             <div v-for="widget in category.widgets" :key="widget.widgetId" class="widget-style">
                 <!-- top area is for title and button -->
@@ -17,7 +30,7 @@
                     </span>
 
                     <span class="top-area-btn">
-                        <ui-button @click="createComponentsForWidget(widget.widgetName)">Use</ui-button>
+                        <ui-button @click="createWidget(widget.widgetName)">Use</ui-button>
                     </span>
                 </div>
 

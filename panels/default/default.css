@@ -1,11 +1,11 @@
-header {
+.title {
     padding: 10px;
     color: #f90; 
     text-align: center;
 }
 
 #app {
-    height: 600px;
+    height: 620px;
     overflow: scroll;
 }
 
@@ -26,4 +26,17 @@ header {
 .top-area-btn ui-button {
     color: white;
     background-color: tomato;
+}
+
+
+#version {
+    position: fixed;
+    bottom: 0px;
+    left: 8px;
+}
+
+#settings-btn {
+    position: fixed;
+    right: 13px;
+    top: 25px;
 }

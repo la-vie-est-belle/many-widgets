@@ -8,7 +8,10 @@ const ZoomView = require('../../static/widgets/zoom-view/methods');
 const ComboBox = require('../../static/widgets/combo-box/methods');
 const SpinBox = require('../../static/widgets/spin-box/methods');
 const BeginnerGuide = require('../../static/widgets/beginner-guide/methods');
+const Tooltip = require('../../static/widgets/tooltip/methods');
 const Vue = require('../../static/third-modules/vue');
+const axios = require('../../static/third-modules/axios');
+const packageJSON = require('../../package.json');
 
 // panel event listener
 exports.listeners = {
@@ -40,11 +43,14 @@ exports.ready = function() {
         el: this.$.app,
         data () {
             return {
+                currentVersion: packageJSON.version,
+
                 allWidgets: [
                     {categoryId: 0, categoryName: "Label", widgets: [
                         {widgetId: 0, widgetName: "Typer", intro: "Qicuk set-up of a typer effect.", videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/typer/", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
                         {widgetId: 1, widgetName: "Bullet Screen", intro: "Qicuk set-up of a bullet screen.", videoLink: "https://www.bilibili.com/video/BV1g341167jA/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/", usage: readFileSync(join(__dirname, "../../static/widgets/bullet-screen/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: "Rolling Number", intro: "Qicuk set-up of a rolling number.", videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/rolling-number/usage.html"), "utf-8")}
+                        {widgetId: 2, widgetName: "Rolling Number", intro: "Qicuk set-up of a rolling number.", videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/rolling-number/usage.html"), "utf-8")},
+                        {widgetId: 3, widgetName: "Tooltip", intro: "Qicuk set-up of tooltips for other widgets.", videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/tooltip", usage: readFileSync(join(__dirname, "../../static/widgets/tooltip/usage.html"), "utf-8")}
                     ]},
                     {categoryId: 1, categoryName: "Button", widgets: [
                         {widgetId: 0, widgetName: "Combo Box", intro: "Quick set-up of a combo box.", videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
@@ -57,12 +63,30 @@ exports.ready = function() {
                         {widgetId: 0, widgetName: "Zoom View", intro: "Qucik set-up of a zoom view.", videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
                         {widgetId: 1, widgetName: "Beginner Guide", intro: "Qucik set-up of a beginner guide.", videoLink: "https://www.bilibili.com/video/BV1g64y1e7R6/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/beginner-guide/usage.html"), "utf-8")}
                     ]},
-                ]
+                ],
             }
+        },
+
+        created () {
+            /* 
+            Delete this method if you don't want to check update.
+            This will be put in the settings panel in the near future.
+            */
+            this.checkUpdate();
         },
         
         methods: {
-            createComponentsForWidget(widgetName) {
+            checkUpdate() {
+                axios.get('https://la-vie.gitee.io/many-widgets/package.json')
+                     .then(function(response) {
+                         let remoteVersion = response.data.version;
+                         if (this.currentVersion != remoteVersion) {
+                             console.warn(`New version ${remoteVersion} of Many Widgets is on. Check it in Cocos Store. :)`);
+                         }
+                     });
+            },
+
+            createWidget(widgetName) {
 
                 switch (widgetName) {
                     /* Label */
@@ -73,32 +97,39 @@ exports.ready = function() {
                         BulletScreen.create(widgetName.replace(/\s/g, ""));
                         break;
                     case this.allWidgets[0].widgets[2].widgetName:
-                        RollingNumber.create(widgetName.replace(/\s/g, ""))
+                        RollingNumber.create(widgetName.replace(/\s/g, ""));
+                        break;
+                    case this.allWidgets[0].widgets[3].widgetName:
+                        Tooltip.create(widgetName.replace(/\s/g, ""));
                         break;
 
                     /* Button */
                     case this.allWidgets[1].widgets[0].widgetName:
-                        ComboBox.create(widgetName.replace(/\s/g, ""))
+                        ComboBox.create(widgetName.replace(/\s/g, ""));
                         break;
                     case this.allWidgets[1].widgets[1].widgetName:
-                        SpinBox.create(widgetName.replace(/\s/g, ""))
+                        SpinBox.create(widgetName.replace(/\s/g, ""));
                         break;
 
                     /* Sprite */
                     case this.allWidgets[2].widgets[0].widgetName:
-                        MovingBackground.create(widgetName.replace(/\s/g, ""))
+                        MovingBackground.create(widgetName.replace(/\s/g, ""));
                         break;
 
                     /* View */
                     case this.allWidgets[3].widgets[0].widgetName:
-                        ZoomView.create(widgetName.replace(/\s/g, ""))
+                        ZoomView.create(widgetName.replace(/\s/g, ""));
                         break;
-                    
                     case this.allWidgets[3].widgets[1].widgetName:
-                        BeginnerGuide.create(widgetName.replace(/\s/g, ""))
+                        BeginnerGuide.create(widgetName.replace(/\s/g, ""));
                         break;
                 }
             },
+
+            /* In development */
+            showSettings() {
+                Editor.Panel.open(`${packageJSON.name}.settings`);
+            }
         },
 
         computed: {

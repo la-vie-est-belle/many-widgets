@@ -1,0 +1,31 @@
+.title {
+    padding: 10px;
+    color: #f90; 
+    text-align: center;
+}
+
+.btn-area {
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.label-place {
+    padding-left: 10px;
+}
+
+.input-place {
+    position: fixed;
+    left: 50%;
+    width: 45%;
+}
+
+select {
+    background-color: dimgray;
+    color: lightgrey;
+    border-radius: 5px;
+
+    position: fixed;
+    left: 50%;
+    width: 47%;
+}
