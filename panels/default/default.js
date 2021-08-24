@@ -50,7 +50,7 @@ exports.ready = function() {
                         {widgetId: 0, widgetName: "Typer", intro: "Qicuk set-up of a typer effect.", videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/typer/", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
                         {widgetId: 1, widgetName: "Bullet Screen", intro: "Qicuk set-up of a bullet screen.", videoLink: "https://www.bilibili.com/video/BV1g341167jA/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/", usage: readFileSync(join(__dirname, "../../static/widgets/bullet-screen/usage.html"), "utf-8")},
                         {widgetId: 2, widgetName: "Rolling Number", intro: "Qicuk set-up of a rolling number.", videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/rolling-number/usage.html"), "utf-8")},
-                        {widgetId: 3, widgetName: "Tooltip", intro: "Qicuk set-up of tooltips for other widgets.", videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/tooltip", usage: readFileSync(join(__dirname, "../../static/widgets/tooltip/usage.html"), "utf-8")}
+                        {widgetId: 3, widgetName: "Tooltip", intro: "Qicuk set-up of tooltips for other widgets.", videoLink: "https://www.bilibili.com/video/BV1zv411N79f/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/tooltip", usage: readFileSync(join(__dirname, "../../static/widgets/tooltip/usage.html"), "utf-8")}
                     ]},
                     {categoryId: 1, categoryName: "Button", widgets: [
                         {widgetId: 0, widgetName: "Combo Box", intro: "Quick set-up of a combo box.", videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
@@ -77,10 +77,11 @@ exports.ready = function() {
         
         methods: {
             checkUpdate() {
+                let self = this;
                 axios.get('https://la-vie.gitee.io/many-widgets/package.json')
                      .then(function(response) {
                          let remoteVersion = response.data.version;
-                         if (this.currentVersion != remoteVersion) {
+                         if (self.currentVersion != remoteVersion) {
                              console.warn(`New version ${remoteVersion} of Many Widgets is on. Check it in Cocos Store. :)`);
                          }
                      });
