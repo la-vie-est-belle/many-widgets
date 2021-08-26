@@ -7,7 +7,7 @@
             </div>
            
             <div>
-                <strong><ui-link value="https://github.com/la-vie-est-belle/many-widgets">Star me on GitHub :)</ui-link></strong>
+                <strong><ui-link value="https://github.com/la-vie-est-belle/many-widgets"><ui-label value="i18n:many-widgets.githubStar"></ui-label></ui-link></strong>
             </div>
         </div>
 
@@ -30,7 +30,7 @@
                     </span>
 
                     <span class="top-area-btn">
-                        <ui-button @click="createWidget(widget.widgetName)">Use</ui-button>
+                        <ui-button @click="createWidget(widget.widgetName)"><ui-label value="i18n:many-widgets.use"></ui-label></ui-button>
                     </span>
                 </div>
 
@@ -43,23 +43,25 @@
 
                 <!-- middle area is for demo, usage and suggestions -->
                 <div class="bottom-area">
-                    <ui-section class="config" header="Demo">
-                        <ui-label style="text-align: justify;">
-                            You may click the link or scan the QR code to view the effect of widget {{ widget.widgetName }}.
-                        </ui-label>
-
+                    <ui-section class="config" header="i18n:many-widgets.demoHeader">
                         <div style="text-align: center;">
-                            <strong><ui-link :value="widget.videoLink">Video Demo</ui-link></strong>
-                            &nbsp;
-                            <strong><ui-link :value="widget.exampleLink">GitHub Demo</ui-link></strong>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <ui-qrcode :value="widget.exampleLink"></ui-qrcode>
+                            <div>
+                                <ui-label style="text-align: justify;" value="i18n:many-widgets.demoIntro"></ui-label>
+                            </div>
+    
+                            <div>
+                                <strong><ui-link :value="widget.videoLink"><ui-label value="i18n:many-widgets.videoDemo"></ui-label></ui-link></strong>
+                                &nbsp;
+                                <strong><ui-link :value="widget.exampleLink"><ui-label value="i18n:many-widgets.githubDemo"></ui-link></strong>
+                            </div>
+    
+                            <div>
+                                <ui-qrcode :value="widget.exampleLink"></ui-qrcode>
+                            </div>
                         </div>
                     </ui-section>
 
-                    <ui-section class="config" header="How to use">
+                    <ui-section class="config" header="i18n:many-widgets.howToUse">
                         <div v-html="widget.usage"></div>
                     </ui-section>
                     <br />

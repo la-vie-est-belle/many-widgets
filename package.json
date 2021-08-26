@@ -38,7 +38,7 @@
             },
             {
                 "path": "i18n:menu.extension/Many Widgets",
-                "label": "open",
+                "label": "i18n:many-widgets.open",
                 "message": "open-panel"
             }
         ],

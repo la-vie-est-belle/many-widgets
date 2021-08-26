@@ -26,6 +26,9 @@ exports.listeners = {
     }
 };
 
+/* i18n */
+const translate = (key) => Editor.I18n.t(`${packageJSON.name}.${key}`);
+
 // the panel content
 exports.template = readFileSync(join(__dirname, "./default.html"), "utf-8");
 
@@ -46,22 +49,22 @@ exports.ready = function() {
                 currentVersion: packageJSON.version,
 
                 allWidgets: [
-                    {categoryId: 0, categoryName: "Label", widgets: [
-                        {widgetId: 0, widgetName: "Typer", intro: "Qicuk set-up of a typer effect.", videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/typer/", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: "Bullet Screen", intro: "Qicuk set-up of a bullet screen.", videoLink: "https://www.bilibili.com/video/BV1g341167jA/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/", usage: readFileSync(join(__dirname, "../../static/widgets/bullet-screen/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: "Rolling Number", intro: "Qicuk set-up of a rolling number.", videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/rolling-number/usage.html"), "utf-8")},
-                        {widgetId: 3, widgetName: "Tooltip", intro: "Qicuk set-up of tooltips for other widgets.", videoLink: "https://www.bilibili.com/video/BV1zv411N79f/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/tooltip", usage: readFileSync(join(__dirname, "../../static/widgets/tooltip/usage.html"), "utf-8")}
+                    {categoryId: 0, categoryName: translate("label"), widgets: [
+                        {widgetId: 0, widgetName: translate("typer"), intro: translate("typerIntro"), videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/typer/", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: translate("bulletScreen"), intro: translate("bulletScreenIntro"), videoLink: "https://www.bilibili.com/video/BV1g341167jA/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/", usage: readFileSync(join(__dirname, "../../static/widgets/bullet-screen/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: translate("rollingNumber"), intro: translate("rollingNumberIntro"), videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/rolling-number/usage.html"), "utf-8")},
+                        {widgetId: 3, widgetName: translate("tooltip"), intro: translate("tooltipIntro"), videoLink: "https://www.bilibili.com/video/BV1zv411N79f/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/tooltip", usage: readFileSync(join(__dirname, "../../static/widgets/tooltip/usage.html"), "utf-8")}
                     ]},
-                    {categoryId: 1, categoryName: "Button", widgets: [
-                        {widgetId: 0, widgetName: "Combo Box", intro: "Quick set-up of a combo box.", videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: "Spin Box", intro: "Quick set-up of a spin box.", videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/spin-box/", usage: readFileSync(join(__dirname, "../../static/widgets/spin-box/usage.html"), "utf-8")},
+                    {categoryId: 1, categoryName: translate("button"), widgets: [
+                        {widgetId: 0, widgetName: translate("comboBox"), intro: translate("comboBoxIntro"), videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: translate("spinBox"), intro: translate("spinBoxIntro"), videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/spin-box/", usage: readFileSync(join(__dirname, "../../static/widgets/spin-box/usage.html"), "utf-8")},
                     ]},
-                    {categoryId: 2, categoryName: "Sprite", widgets: [
-                        {widgetId: 0, widgetName: "Moving Background", intro: "Infinite Background movement.", videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
+                    {categoryId: 2, categoryName: translate("sprite"), widgets: [
+                        {widgetId: 0, widgetName: translate("movingBackground"), intro: translate("movingBackgroundIntro"), videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
                     ]},
-                    {categoryId: 3, categoryName: "View", widgets: [
-                        {widgetId: 0, widgetName: "Zoom View", intro: "Qucik set-up of a zoom view.", videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: "Beginner Guide", intro: "Qucik set-up of a beginner guide.", videoLink: "https://www.bilibili.com/video/BV1g64y1e7R6/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/beginner-guide/usage.html"), "utf-8")}
+                    {categoryId: 3, categoryName: translate("view"), widgets: [
+                        {widgetId: 0, widgetName: translate("zoomView"), intro: translate("zoomViewIntro"), videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: translate("beginnerGuide"), intro: translate("beginnerGuideIntro"), videoLink: "https://www.bilibili.com/video/BV1g64y1e7R6/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/beginner-guide/usage.html"), "utf-8")}
                     ]},
                 ],
             }
@@ -70,7 +73,6 @@ exports.ready = function() {
         created () {
             /* 
             Delete this method if you don't want to check update.
-            This will be put in the settings panel in the near future.
             */
             this.checkUpdate();
         },
@@ -88,41 +90,46 @@ exports.ready = function() {
             },
 
             createWidget(widgetName) {
-
+                
+                /*
+                Originally, I passed 'widgetName.replace(/\s/g, "")' to create(),
+                but as I added i18n, I found the widgetName will be translated into another language.
+                This will destroy the script in assets. So, I need to pass the widget name explicitly.
+                */
                 switch (widgetName) {
                     /* Label */
                     case this.allWidgets[0].widgets[0].widgetName:
-                        Typer.create(widgetName.replace(/\s/g, ""));
+                        Typer.create("Typer");
                         break;
                     case this.allWidgets[0].widgets[1].widgetName:
-                        BulletScreen.create(widgetName.replace(/\s/g, ""));
+                        BulletScreen.create("BulletScreen");
                         break;
                     case this.allWidgets[0].widgets[2].widgetName:
-                        RollingNumber.create(widgetName.replace(/\s/g, ""));
+                        RollingNumber.create("RollingNumber");
                         break;
                     case this.allWidgets[0].widgets[3].widgetName:
-                        Tooltip.create(widgetName.replace(/\s/g, ""));
+                        Tooltip.create("Tooltip");
                         break;
 
                     /* Button */
                     case this.allWidgets[1].widgets[0].widgetName:
-                        ComboBox.create(widgetName.replace(/\s/g, ""));
+                        ComboBox.create("ComboBox");
                         break;
                     case this.allWidgets[1].widgets[1].widgetName:
-                        SpinBox.create(widgetName.replace(/\s/g, ""));
+                        SpinBox.create("SpinBox");
                         break;
 
                     /* Sprite */
                     case this.allWidgets[2].widgets[0].widgetName:
-                        MovingBackground.create(widgetName.replace(/\s/g, ""));
+                        MovingBackground.create("MovingBackground");
                         break;
 
                     /* View */
                     case this.allWidgets[3].widgets[0].widgetName:
-                        ZoomView.create(widgetName.replace(/\s/g, ""));
+                        ZoomView.create("ZoomView");
                         break;
                     case this.allWidgets[3].widgets[1].widgetName:
-                        BeginnerGuide.create(widgetName.replace(/\s/g, ""));
+                        BeginnerGuide.create("BeginnerGuide");
                         break;
                 }
             },
