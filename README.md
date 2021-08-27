@@ -20,6 +20,7 @@ Supported Cocos Creator version: 3.x.
 7. Spin Box
 8. Beginner Guide
 9. Tooltip
+10. Joystick 2D
 
 <br>
 
@@ -59,6 +60,10 @@ Supported Cocos Creator version: 3.x.
 9. Tooltip
 - github link: https://la-vie-est-belle.github.io/many-widgets-demo/tooltip/
 - video link: https://www.bilibili.com/video/BV1zv411N79f/
+
+10. Joystick 2D
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/joystick2D/
+- video link: https://www.bilibili.com/video/BV1LP4y1W73z/
 
 <br/>
 <br/>

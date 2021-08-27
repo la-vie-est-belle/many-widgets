@@ -3,6 +3,7 @@ module.exports = {
     "open": "open",
 
     /* Common */
+    "updateWarn": `New version of Many Widgets is on. Check it in Cocos Store. :)`,
     "githubStar": "Star me on GitHub :)",
     "use": "Use",
     "demoHeader": "Demo",
@@ -48,6 +49,11 @@ module.exports = {
     "spinBoxIntro": "Quick set-up of a spin box.",
     "spinBoxStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW SpinBox node</strong> in the Hierarchy tab. This node is created from the <strong style='color:#f90'>MW SpinBox prefab</strong> in the assets.",
     "spinBoxStep2": "Drag the MW SpinBox node to under the Canvas. If there is no Canvas, please create one. Now, run the project and you will see the spin box.",
+
+    "joystick2D": "Joystick 2D",
+    "joystickIntro": "Quick set-up of a joystick to control a 2D node.",
+    "joystick2DStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW Joystick2D node</strong> as well as its child <strong style='color:#f90'>Center Button node</strong>. <strong style='color:#f90'>MW_Joystick2D script</strong> is created in the assets.",
+    "joystick2DStep2": "Drag the MW Joystick2D node to under the Canvas. If there is no Canvas, please create one. Then, fill the parent and child nodes with sprite frames(joystick background and its button), and drag the target node onto the <strong style='color:#f90'>MWJoystick2D</strong> component. Now run the project and you will can control the target node with the joystick.",
 
     /* Sprite */
     "sprite": "Sprite",

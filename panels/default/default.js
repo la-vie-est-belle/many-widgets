@@ -9,6 +9,8 @@ const ComboBox = require('../../static/widgets/combo-box/methods');
 const SpinBox = require('../../static/widgets/spin-box/methods');
 const BeginnerGuide = require('../../static/widgets/beginner-guide/methods');
 const Tooltip = require('../../static/widgets/tooltip/methods');
+const Joystick2D = require('../../static/widgets/joystick2D/methods');
+
 const Vue = require('../../static/third-modules/vue');
 const axios = require('../../static/third-modules/axios');
 const packageJSON = require('../../package.json');
@@ -58,6 +60,7 @@ exports.ready = function() {
                     {categoryId: 1, categoryName: translate("button"), widgets: [
                         {widgetId: 0, widgetName: translate("comboBox"), intro: translate("comboBoxIntro"), videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
                         {widgetId: 1, widgetName: translate("spinBox"), intro: translate("spinBoxIntro"), videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/spin-box/", usage: readFileSync(join(__dirname, "../../static/widgets/spin-box/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: translate("joystick2D"), intro: translate("joystick2DIntro"), videoLink: "https://www.bilibili.com/video/BV1LP4y1W73z/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/joystick2D/", usage: readFileSync(join(__dirname, "../../static/widgets/joystick2D/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 2, categoryName: translate("sprite"), widgets: [
                         {widgetId: 0, widgetName: translate("movingBackground"), intro: translate("movingBackgroundIntro"), videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
@@ -84,7 +87,7 @@ exports.ready = function() {
                      .then(function(response) {
                          let remoteVersion = response.data.version;
                          if (self.currentVersion != remoteVersion) {
-                             console.warn(`New version ${remoteVersion} of Many Widgets is on. Check it in Cocos Store. :)`);
+                             console.warn(translate("updateWarn"));
                          }
                      });
             },
@@ -117,6 +120,9 @@ exports.ready = function() {
                         break;
                     case this.allWidgets[1].widgets[1].widgetName:
                         SpinBox.create("SpinBox");
+                        break;
+                    case this.allWidgets[1].widgets[2].widgetName:
+                        Joystick2D.create("Joystick2D");
                         break;
 
                     /* Sprite */
