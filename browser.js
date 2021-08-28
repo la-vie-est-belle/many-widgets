@@ -1,6 +1,6 @@
 "use strict";
 const { join } = require('path');
-const { existsSync, mkdirSync } = require('fs');
+const { existsSync } = require('fs');
 const packageJSON = require('./package.json');
 
 

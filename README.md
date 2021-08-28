@@ -70,7 +70,7 @@ Supported Cocos Creator version: 3.x.
 
 ## Docs:
 You may find the `demo link` and `How to use` sections in the plugin panel.
-<img src="https://img-blog.csdnimg.cn/795a56ad000a41fbb08505f3f144d3fb.png" width="300">
+<img src="https://img-blog.csdnimg.cn/2cde638a1a00426d85d1ce28ed1a9566.png" width="300">
 <br/>
 <br/>
 

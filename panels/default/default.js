@@ -1,19 +1,27 @@
+/* Built-in and third modules */
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const Typer = require('../../static/widgets/typer/methods');
-const BulletScreen = require('../../static/widgets/bullet-screen/methods');
-const RollingNumber = require('../../static/widgets/rolling-number/methods');
-const MovingBackground = require('../../static/widgets/moving-background/methods');
-const ZoomView = require('../../static/widgets/zoom-view/methods');
-const ComboBox = require('../../static/widgets/combo-box/methods');
-const SpinBox = require('../../static/widgets/spin-box/methods');
-const BeginnerGuide = require('../../static/widgets/beginner-guide/methods');
-const Tooltip = require('../../static/widgets/tooltip/methods');
-const Joystick2D = require('../../static/widgets/joystick2D/methods');
-
 const Vue = require('../../static/third-modules/vue');
 const axios = require('../../static/third-modules/axios');
 const packageJSON = require('../../package.json');
+
+/* Label */
+const Typer = require('../../static/widgets/typer/methods');
+const BulletScreen = require('../../static/widgets/bullet-screen/methods');
+const RollingNumber = require('../../static/widgets/rolling-number/methods');
+const Tooltip = require('../../static/widgets/tooltip/methods');
+
+/* Button */
+const ComboBox = require('../../static/widgets/combo-box/methods');
+const SpinBox = require('../../static/widgets/spin-box/methods');
+const Joystick2D = require('../../static/widgets/joystick2D/methods');
+
+/* Sprite */
+const MovingBackground = require('../../static/widgets/moving-background/methods');
+
+/* View */
+const ZoomView = require('../../static/widgets/zoom-view/methods');
+const BeginnerGuide = require('../../static/widgets/beginner-guide/methods');
 
 // panel event listener
 exports.listeners = {
@@ -87,7 +95,7 @@ exports.ready = function() {
                      .then(function(response) {
                          let remoteVersion = response.data.version;
                          if (self.currentVersion != remoteVersion) {
-                             console.warn(translate("updateWarn"));
+                             console.warn(`[v${remoteVersion}] ${translate("updateWarn")}`);
                          }
                      });
             },
@@ -95,9 +103,9 @@ exports.ready = function() {
             createWidget(widgetName) {
                 
                 /*
-                Originally, I passed 'widgetName.replace(/\s/g, "")' to create(),
+                Originally, I passed 'widgetName.replace(/\s/g, "")' to create() method below,
                 but as I added i18n, I found the widgetName will be translated into another language.
-                This will destroy the script in assets. So, I need to pass the widget name explicitly.
+                This will mess up the script in assets. So, I need to pass the widget name explicitly.
                 */
                 switch (widgetName) {
                     /* Label */
