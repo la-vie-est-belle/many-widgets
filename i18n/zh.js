@@ -84,8 +84,8 @@ module.exports = {
     /* 3D Model */
     "3Dmodel": "3D 模型",
     "pickStarMonster": "摘星星的怪物",
-    "pickStarMonsterIntro": "在摘星星游戏里面的紫色怪物",
+    "pickStarMonsterIntro": "在摘星星游戏里面的紫色怪物。",
 
     "star": "星星",
-    "starIntro": "黄色五角星"
+    "starIntro": "黄色五角星。"
 }
