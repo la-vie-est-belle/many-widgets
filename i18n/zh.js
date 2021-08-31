@@ -9,7 +9,7 @@ module.exports = {
     "demoHeader": "演示",
     "demoIntro": "点击下方链接，或扫描二维码来查看该控件效果",
     "videoDemo": "视频讲解",
-    "githubDemo": "项目演示",
+    "projectDemo": "项目演示",
     "howToUse": "如何使用",
     "step1": "步骤 1",
     "step2": "步骤 2",

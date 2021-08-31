@@ -33,58 +33,58 @@ Supported Cocos Creator version: 3.x.
 
 ## Widgets Demos:
 1. Typer
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/typer/
-- video link: https://www.bilibili.com/video/BV1df4y137gY/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/typer/
+- video: https://www.bilibili.com/video/BV1df4y137gY/
 
 2. Bullet Screen
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/
-- video link: https://www.bilibili.com/video/BV1g341167jA/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/bullet-screen/
+- video: https://www.bilibili.com/video/BV1g341167jA/
 
 3. Rolling Number
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number/
-- video link: https://www.bilibili.com/video/BV1jP4y1s7DY/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/rolling-number/
+- video: https://www.bilibili.com/video/BV1jP4y1s7DY/
 
 4. Combo Box
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/
-- video link: https://www.bilibili.com/video/BV113411q7vJ/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/combo-box/
+- video: https://www.bilibili.com/video/BV113411q7vJ/
 
 5. Moving Background
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/moving-background/
-- video link: https://www.bilibili.com/video/BV1a64y1e7Wz/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/moving-background/
+- video: https://www.bilibili.com/video/BV1a64y1e7Wz/
 
 6. Zoom View
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/
-- video link: https://www.bilibili.com/video/BV1BM4y1L7wT/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/
+- video: https://www.bilibili.com/video/BV1BM4y1L7wT/
 
 7. Spin Box
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/spin-box/
-- video link: https://www.bilibili.com/video/BV16q4y1S7RH/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/spin-box/
+- video: https://www.bilibili.com/video/BV16q4y1S7RH/
 
 8. Beginner Guide
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/
-- video link: https://www.bilibili.com/video/BV1g64y1e7R6/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/
+- video: https://www.bilibili.com/video/BV1g64y1e7R6/
 
 9. Tooltip
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/tooltip/
-- video link: https://www.bilibili.com/video/BV1zv411N79f/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/tooltip/
+- video: https://www.bilibili.com/video/BV1zv411N79f/
 
 10. Joystick 2D
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/joystick2D/
-- video link: https://www.bilibili.com/video/BV1LP4y1W73z/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/joystick2D/
+- video: https://www.bilibili.com/video/BV1LP4y1W73z/
 
 11. 2D Follow 3D
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/2D-follow-3D/
-- video link: https://www.bilibili.com/video/BV1nU4y177Qh/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/2D-follow-3D/
+- video: https://www.bilibili.com/video/BV1nU4y177Qh/
 
 <br/>
 <br/>
 
 ## 3D Models Demos:
 1. Pick Star Monster
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/pick-star-monster-3Dmodel/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/pick-star-monster-3Dmodel/
 
 2. Star
-- github link: https://la-vie-est-belle.github.io/many-widgets-demo/star-3Dmodel/
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/star-3Dmodel/
 
 <br/>
 <br/>

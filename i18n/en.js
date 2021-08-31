@@ -9,7 +9,7 @@ module.exports = {
     "demoHeader": "Demo",
     "demoIntro": "You may click the link or scan the QR code to view the effect of this widget.",
     "videoDemo": "Video Demo",
-    "githubDemo": "Github Demo",
+    "projectDemo": "Project Demo",
     "howToUse": "How to use",
     "step1": "Step 1",
     "step2": "Step 2",
