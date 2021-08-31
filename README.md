@@ -21,7 +21,7 @@ Supported Cocos Creator version: 3.x.
 8. Beginner Guide
 9. Tooltip
 10. Joystick 2D
-11. 2D Follow 3D
+11. 2D Follow 3D (Use it on player's name or blood progress bar)
 
 <br/>
 
