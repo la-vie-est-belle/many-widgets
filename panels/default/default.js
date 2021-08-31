@@ -22,6 +22,11 @@ const MovingBackground = require('../../static/widgets/moving-background/methods
 /* View */
 const ZoomView = require('../../static/widgets/zoom-view/methods');
 const BeginnerGuide = require('../../static/widgets/beginner-guide/methods');
+const _2DFollow3D = require('../../static/widgets/2D-follow-3D/methods');
+
+/* 3D Model */
+const PickStarMonster = require('../../static/widgets/models/pick-star-monster/methods');
+const Star = require('../../static/widgets/models/star/methods');
 
 // panel event listener
 exports.listeners = {
@@ -75,7 +80,12 @@ exports.ready = function() {
                     ]},
                     {categoryId: 3, categoryName: translate("view"), widgets: [
                         {widgetId: 0, widgetName: translate("zoomView"), intro: translate("zoomViewIntro"), videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: translate("beginnerGuide"), intro: translate("beginnerGuideIntro"), videoLink: "https://www.bilibili.com/video/BV1g64y1e7R6/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/beginner-guide/usage.html"), "utf-8")}
+                        {widgetId: 1, widgetName: translate("beginnerGuide"), intro: translate("beginnerGuideIntro"), videoLink: "https://www.bilibili.com/video/BV1g64y1e7R6/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/beginner-guide/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: translate("2Dfollow3D"), intro: translate("2Dfollow3DIntro"), videoLink: "https://www.bilibili.com/video/BV1nU4y177Qh/", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/2D-follow-3D/", usage: readFileSync(join(__dirname, "../../static/widgets/2D-follow-3D/usage.html"), "utf-8")}
+                    ]},
+                    {categoryId: 4, categoryName: translate("3Dmodel"), widgets: [
+                        {widgetId: 0, widgetName: translate("pickStarMonster"), intro: translate("pickStarMonsterIntro"), videoLink: "", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/pick-star-monster-3Dmodel/", usage: "" },
+                        {widgetId: 1, widgetName: translate("star"), intro: translate("starIntro"), videoLink: "", exampleLink: "https://la-vie-est-belle.github.io/many-widgets-demo/star-3Dmodel/", usage: "" },
                     ]},
                 ],
             }
@@ -145,6 +155,17 @@ exports.ready = function() {
                     case this.allWidgets[3].widgets[1].widgetName:
                         BeginnerGuide.create("BeginnerGuide");
                         break;
+                    case this.allWidgets[3].widgets[2].widgetName:
+                        _2DFollow3D.create("2DFollow3D");
+                        break;
+
+                    /* 3D Model */
+                    case this.allWidgets[4].widgets[0].widgetName:
+                        PickStarMonster.create("PickStarMonster");
+                        break;
+                    case this.allWidgets[4].widgets[1].widgetName:
+                        Star.create("Star");
+                        break;
                 }
             },
 
@@ -153,14 +174,6 @@ exports.ready = function() {
                 Editor.Panel.open(`${packageJSON.name}.settings`);
             }
         },
-
-        computed: {
-            
-        },
-
-        watch: {
-            
-        }
     })
 };
 

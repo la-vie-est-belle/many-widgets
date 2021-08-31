@@ -73,5 +73,19 @@ module.exports = {
     "beginnerGuideIntro": "Quick set-up of a beginner guide.",
     "beginnerGuideStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW BeginnerGuide node</strong> as well as its children <strong style='color:#f90'>background</strong> and <strong style='color:#f90'>instruction</strong> in the Hierarchy tab. A <strong style='color:#f90'>MW_BeginnerGuide script</strong> is created in the assets.",
     "beginnerGuideStep2": "The MW BeginnerGuide node must be placed under the Canvas and should be its last child. Otherwise the mask won't cover some nodes. Now set the background  a plain sprite frame.",
-    "beginnerGuideStep3": "In your own script, call the <strong style='color:#f90'>setInstructions()</strong> and the <strong style='color:#f90'>setClickNodes()</strong> API to set the instructions and the nodes to click, and at last call <strong style='color:#f90'>show()</strong>. The project is good to go."
+    "beginnerGuideStep3": "In your own script, call the <strong style='color:#f90'>setInstructions()</strong> and the <strong style='color:#f90'>setClickNodes()</strong> API to set the instructions and the nodes to click, and at last call <strong style='color:#f90'>show()</strong>. The project is good to go.",
+
+    "2Dfollow3D": "2D Follow 3D",
+    "2Dfollow3DIntro": "Make a 2D node follow a 3D node. You may use it on the player's name or the progress bar.",
+    "2Dfollow3DStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW 2DFollow3D node</strong> in the Hierarchy tab and the <strong style='color:#f90'>MW_2DFollow3D script</strong> in the assets.",
+    "2Dfollow3DStep2": "MW 2DFollow3D node, which is empty, should be under the Canvas node. Now add the label component or progress bar component or any other 2D component you like onto MW 2DFollow3D node.",
+    "2Dfollow3DStep3": "In your script, call <strong style='color:#f90'>follow()</strong> to let the 2D node (caller) follow a 3D node.",
+
+    /* 3D Model */
+    "3Dmodel": "3D Model",
+    "pickStarMonster": "Pick Star Monster",
+    "pickStarMonsterIntro": "The purple monster in the pick star game.",
+
+    "star": "Star",
+    "starIntro": "A star with five points."
 }

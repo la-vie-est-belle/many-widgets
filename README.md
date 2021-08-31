@@ -10,7 +10,7 @@ Supported Cocos Creator version: 3.x.
 
 <br/>
 
-## Up to now:
+## Widgets Up To Now:
 1. Typer
 2. Bullet Screen
 3. Rolling Number
@@ -21,10 +21,15 @@ Supported Cocos Creator version: 3.x.
 8. Beginner Guide
 9. Tooltip
 10. Joystick 2D
+11. 2D Follow 3D
+
+## 3D Models Up To Now:
+1. Pick Star Monster
+2. Star
 
 <br>
 
-## Demos:
+## Widgets Demos:
 1. Typer
 - github link: https://la-vie-est-belle.github.io/many-widgets-demo/typer/
 - video link: https://www.bilibili.com/video/BV1df4y137gY/
@@ -64,6 +69,20 @@ Supported Cocos Creator version: 3.x.
 10. Joystick 2D
 - github link: https://la-vie-est-belle.github.io/many-widgets-demo/joystick2D/
 - video link: https://www.bilibili.com/video/BV1LP4y1W73z/
+
+11. 2D Follow 3D
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/2D-follow-3D/
+- video link: https://www.bilibili.com/video/BV1nU4y177Qh/
+
+<br/>
+<br/>
+
+## 3D Models Demos:
+1. Pick Star Monster
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/pick-star-monster-3Dmodel/
+
+2. Star
+- github link: https://la-vie-est-belle.github.io/many-widgets-demo/star-3Dmodel/
 
 <br/>
 <br/>

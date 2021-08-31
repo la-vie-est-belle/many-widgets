@@ -73,5 +73,19 @@ module.exports = {
     "beginnerGuideIntro": "快速生成新手引导。",
     "beginnerGuideStep1": "点击使用按钮后，在层级窗口中可以发现一个<strong style='color:#f90'>MW BeginnerGuide</strong>及其子节点<strong style='color:#f90'>background</strong>和<strong style='color:#f90'>instruction</strong>。在资源管理器中可以看到一个<strong style='color:#f90'>MW_BeginnerGuide</strong>脚本。",
     "beginnerGuideStep2": "MW BeginnerGuide节点必须在Canvas节点下，而且必须放在最下面，否则遮罩无法覆盖一些节点。在给background节点设置好图片后运行项目即可。",
-    "beginnerGuideStep3": "在其他脚本中，你可以调用<strong style='color:#f90'>setInstructions()</strong>和<strong style='color:#f90'>setClickNodes()</strong>来设置指示文本和要点击的节点。设置完毕后，调用<strong style='color:#f90'>show()</strong>就可以啦。"
+    "beginnerGuideStep3": "在其他脚本中，你可以调用<strong style='color:#f90'>setInstructions()</strong>和<strong style='color:#f90'>setClickNodes()</strong>来设置指示文本和要点击的节点。设置完毕后，调用<strong style='color:#f90'>show()</strong>就可以啦。",
+
+    "2Dfollow3D": "2D节点跟随3D节点",
+    "2Dfollow3DIntro": "让一个2D节点跟随一个3D节点，可用于人物名称和血条。",
+    "2Dfollow3DStep1": "点击使用按钮后，在层级窗口中我们可以发现一个<strong style='color:#f90'>MW 2DFollow3D</strong>节点，在资源管理中有一个<strong style='color:#f90'>MW_2DFollow3D</strong>脚本。",
+    "2Dfollow3DStep2": "MW 2DFollow3D(初始时是空节点), 记得要将它拖到Canvas节点下，现在你可以给MW 2DFollow3D节点加上Label组件或者Progress Bar组件。",
+    "2Dfollow3DStep3": "在其他脚本中，调用<strong style='color:#f90'>follow()</strong>方法让2D节点(调用者)跟随一个3D节点。",
+
+    /* 3D Model */
+    "3Dmodel": "3D 模型",
+    "pickStarMonster": "摘星星的怪物",
+    "pickStarMonsterIntro": "在摘星星游戏里面的紫色怪物",
+
+    "star": "星星",
+    "starIntro": "黄色五角星"
 }

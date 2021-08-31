@@ -50,7 +50,7 @@
                             </div>
     
                             <div>
-                                <strong><ui-link :value="widget.videoLink"><ui-label value="i18n:many-widgets.videoDemo"></ui-label></ui-link></strong>
+                                <strong v-if="widget.videoLink"><ui-link :value="widget.videoLink"><ui-label value="i18n:many-widgets.videoDemo"></ui-label></ui-link></strong>
                                 &nbsp;
                                 <strong><ui-link :value="widget.exampleLink"><ui-label value="i18n:many-widgets.githubDemo"></ui-link></strong>
                             </div>
@@ -61,7 +61,7 @@
                         </div>
                     </ui-section>
 
-                    <ui-section class="config" header="i18n:many-widgets.howToUse">
+                    <ui-section class="config" header="i18n:many-widgets.howToUse" v-if="widget.usage">
                         <div v-html="widget.usage"></div>
                     </ui-section>
                     <br />
