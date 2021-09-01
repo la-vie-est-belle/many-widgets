@@ -15,6 +15,7 @@ const Tooltip = require('../../static/widgets/tooltip/methods');
 const ComboBox = require('../../static/widgets/combo-box/methods');
 const SpinBox = require('../../static/widgets/spin-box/methods');
 const Joystick2D = require('../../static/widgets/joystick2D/methods');
+const Joystick3D = require('../../static/widgets/joystick3D/methods');
 
 /* Sprite */
 const MovingBackground = require('../../static/widgets/moving-background/methods');
@@ -74,6 +75,7 @@ exports.ready = function() {
                         {widgetId: 0, widgetName: translate("comboBox"), intro: translate("comboBoxIntro"), videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
                         {widgetId: 1, widgetName: translate("spinBox"), intro: translate("spinBoxIntro"), videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/spin-box/", usage: readFileSync(join(__dirname, "../../static/widgets/spin-box/usage.html"), "utf-8")},
                         {widgetId: 2, widgetName: translate("joystick2D"), intro: translate("joystick2DIntro"), videoLink: "https://www.bilibili.com/video/BV1LP4y1W73z/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/joystick2D/", usage: readFileSync(join(__dirname, "../../static/widgets/joystick2D/usage.html"), "utf-8")},
+                        {widgetId: 3, widgetName: translate("joystick3D"), intro: translate("joystick3DIntro"), videoLink: "https://www.bilibili.com/video/BV1w64y1Y7Xm/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/joystick3D/", usage: readFileSync(join(__dirname, "../../static/widgets/joystick3D/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 2, categoryName: translate("sprite"), widgets: [
                         {widgetId: 0, widgetName: translate("movingBackground"), intro: translate("movingBackgroundIntro"), videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
@@ -141,6 +143,9 @@ exports.ready = function() {
                         break;
                     case this.allWidgets[1].widgets[2].widgetName:
                         Joystick2D.create("Joystick2D");
+                        break;
+                    case this.allWidgets[1].widgets[3].widgetName:
+                        Joystick3D.create("Joystick3D");
                         break;
 
                     /* Sprite */

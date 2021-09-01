@@ -21,7 +21,8 @@ Supported Cocos Creator version: 3.x.
 8. Beginner Guide
 9. Tooltip
 10. Joystick 2D
-11. 2D Follow 3D (Use it on player's name or blood progress bar)
+11. Joystick 3D
+12. 2D Follow 3D (Use it on player's name or blood progress bar)
 
 <br/>
 
@@ -72,7 +73,11 @@ Supported Cocos Creator version: 3.x.
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/joystick2D/
 - video: https://www.bilibili.com/video/BV1LP4y1W73z/
 
-11. 2D Follow 3D
+11. Joystick 3D
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/joystick3D/
+- video: https://www.bilibili.com/video/BV1w64y1Y7Xm/
+
+12. 2D Follow 3D
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/2D-follow-3D/
 - video: https://www.bilibili.com/video/BV1nU4y177Qh/
 

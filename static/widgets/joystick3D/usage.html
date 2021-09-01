@@ -1,0 +1,55 @@
+<html>
+    <header>
+        <style>
+            p {
+                text-align: justify;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step1"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.joystick3DStep1"></ui-label></p>
+        </div>
+        <br />
+        
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step2"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.joystick3DStep2"></ui-label></p>
+        </div>
+        <br />
+
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step3"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.joystick3DStep3"></ui-label></p>
+        </div>
+        <br />
+
+        <div>
+            <h3>API:</h3>
+            <ui-code language="typescript">
+                /*
+                Set the node to control.
+                You may directly drag the target node on the MWJoystick3D component.
+                */
+                setTargetNode(targetNode: Node)
+
+                /*
+                Set the target node's speed.
+                */
+                setPlayerSpeed(speed: number)
+
+                /*
+                Set the main camera's speed.
+                */
+                setCameraSpeed(speed: number)
+
+                /*
+                Wheter the camera is movable.
+                */
+                isCameraMovable(isMovable: Boolean)
+            </ui-code>
+        </div>
+    </body>
+</html>

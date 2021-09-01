@@ -51,9 +51,15 @@ module.exports = {
     "spinBoxStep2": "Drag the MW SpinBox node to under the Canvas. If there is no Canvas, please create one. Now, run the project and you will see the spin box.",
 
     "joystick2D": "Joystick 2D",
-    "joystickIntro": "Quick set-up of a joystick to control a 2D node.",
+    "joystick2DIntro": "Quick set-up of a joystick to control a 2D node.",
     "joystick2DStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW Joystick2D node</strong> as well as its child <strong style='color:#f90'>Center Button node</strong>. <strong style='color:#f90'>MW_Joystick2D script</strong> is created in the assets.",
     "joystick2DStep2": "Drag the MW Joystick2D node to under the Canvas. If there is no Canvas, please create one. Then, fill the parent and child nodes with sprite frames(joystick background and its button), and drag the target node onto the <strong style='color:#f90'>MWJoystick2D</strong> component. Now run the project and you will can control the target node with the joystick.",
+
+    "joystick3D": "Joystick 3D",
+    "joystick3DIntro": "Quick set-up of a joystick to control a 3D node.",
+    "joystick3DStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW Joystick3D node</strong> as well as its child <strong style='color:#f90'>Center Button node</strong>. <strong style='color:#f90'>MW_Joystick3D script</strong> is created in the assets.",
+    "joystick3DStep2": "Drag the MW Joystick3D node to under the Canvas. If there is no Canvas, please create one. Then, fill the parent and child nodes with sprite frames(joystick background and its button). Drag the target 2D node and the Main Camera onto the <strong style='color:#f90'>MWJoystick3D</strong> component. Now run the project and you will can control the target node with the joystick.",
+    "joystick3DStep3": "If you call <strong style='color:#f90'>isCameraMovable()</strong> and pass true to is, you can change the main camera's view angle by sliding on the Canvas.",
 
     /* Sprite */
     "sprite": "Sprite",

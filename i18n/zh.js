@@ -51,9 +51,15 @@ module.exports = {
     "spinBoxStep2": "将MW SpinBox节点拖到Canvas节点下。如果没有Canvas节点的话，请创建一个。现在运行项目，你就可以看到一个数字调节框了。",
 
     "joystick2D": "2D摇杆",
-    "joystickIntro": "快速建立摇杆来控制一个2D节点。",
+    "joystick2DIntro": "快速建立摇杆来控制一个2D节点。",
     "joystick2DStep1": "点击使用按钮后，在层级窗口中可以发现一个<strong style='color:#f90'>MW Joystick2D</strong>节点及其子节点<strong style='color:#f90'>Center Button</strong>。在资源管理器中可以看到一个<strong style='color:#f90'>MW_Joystick2D</strong>脚本。",
     "joystick2DStep2": "将MW Joystick2D节点拖到Canvas节点下。如果没有Canvas节点的话，请创建一个。接着给父节点和子节点分别添加上摇杆背景和按钮图片, 并将要被控制的节点拖到<strong style='color:#f90'>MWJoystick2D</strong>组件上。现在运行项目就可以用摇杆控制目标节点了。",
+
+    "joystick3D": "3D摇杆",
+    "joystick3DIntro": "快速建立摇杆来控制一个3D节点。",
+    "joystick3DStep1": "点击使用按钮后，在层级窗口中可以发现一个<strong style='color:#f90'>MW Joystick3D</strong>节点及其子节点<strong style='color:#f90'>Center Button</strong>。在资源管理器中可以看到一个<strong style='color:#f90'>MW_Joystick3D</strong>脚本。",
+    "joystick3DStep2": "将MW Joystick3D节点拖到Canvas节点下。如果没有Canvas节点的话，请创建一个。接着给父节点和子节点分别添加上摇杆背景和按钮图片, 并将要被控制的3D节点和主相机拖到<strong style='color:#f90'>MWJoystick3D</strong>组件上。现在运行项目就可以用摇杆控制目标节点了。",
+    "joystick3DStep3": "如果调用<strong style='color:#f90'>isCameraMovable()</strong> 并传入一个true, 那么就可以通过滑动来控制主相机视角。",
 
     /* 精灵类 */
     "sprite": "精灵类",
