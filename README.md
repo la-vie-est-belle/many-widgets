@@ -23,12 +23,14 @@ Supported Cocos Creator version: 3.x.
 10. Joystick 2D
 11. Joystick 3D
 12. 2D Follow 3D (Use it on player's name or blood progress bar)
+13. Magnifier
 
 <br/>
 
 ## 3D Models Up To Now:
 1. Pick Star Monster
 2. Star
+3. Heart
 
 <br>
 
@@ -81,6 +83,10 @@ Supported Cocos Creator version: 3.x.
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/2D-follow-3D/
 - video: https://www.bilibili.com/video/BV1nU4y177Qh/
 
+13. Magnifier
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/magnifier/
+- video: https://www.bilibili.com/video/BV1sL4y1a7Rq/
+
 <br/>
 <br/>
 
@@ -90,6 +96,9 @@ Supported Cocos Creator version: 3.x.
 
 2. Star
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/star-3Dmodel/
+
+3. Heart
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/heart-3Dmodel/
 
 <br/>
 <br/>

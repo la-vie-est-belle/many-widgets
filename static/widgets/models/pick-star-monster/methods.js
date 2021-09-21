@@ -10,8 +10,8 @@ var PickStarMonster = {
     },
 
     createModel: function(widgetName) {
-        let source = join(__dirname, `./assets/${widgetName}.glb`);
-        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + `${widgetName}.glb`;
+        let source = join(__dirname, `./assets/MW ${widgetName}.glb`);
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + `MW ${widgetName}.glb`;
         return Editor.Message.request("asset-db", "import-asset", source, target);
     },
 }

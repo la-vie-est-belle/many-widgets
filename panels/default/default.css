@@ -35,6 +35,13 @@
     left: 8px;
 }
 
+
+#author {
+    position: fixed;
+    bottom: 0px;
+    right: 8px;
+}
+
 #settings-btn {
     position: fixed;
     right: 13px;

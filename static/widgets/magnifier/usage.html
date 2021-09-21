@@ -1,0 +1,51 @@
+<html>
+    <header>
+        <style>
+            p {
+                text-align: justify;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step1"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.magnifierStep1"></ui-label></p>
+        </div>
+        <br />
+        
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step2"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.magnifierStep2"></ui-label></p>
+        </div>
+        <br />
+
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step3"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.magnifierStep3"></ui-label></p>
+        </div>
+        <br />
+
+        <div>
+            <h3>API:</h3>
+            <ui-code language="typescript">
+                /*
+                Increase the magnifying effect.
+                */
+                zoomIn()
+
+                /*
+                Reduce the magnifying effect.
+                */
+                zoomOut()
+
+                /*
+                Set the zoom value. 
+                The value should be between(including) 10 and 50.
+                The method actually changes the ortho height of the camera.
+                */
+                setZoomValue(value: number)
+            </ui-code>
+        </div>
+    </body>
+</html>

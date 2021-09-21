@@ -5,6 +5,7 @@ module.exports = {
     /* 通用 */
     "updateWarn": `Many Widgets新版本已上线，去Cocos商店下载吧。:)`,
     "githubStar": "GitHub上标个星吧:)",
+    "author": "© 仍梦",
     "use": "使用",
     "demoHeader": "演示",
     "demoIntro": "点击下方链接，或扫描二维码来查看该控件效果",
@@ -68,6 +69,12 @@ module.exports = {
     "movingBackgroundStep1": "点击使用按钮后，在层级窗口中可以发现一个<strong style='color:#f90'>MW MovingBackground</strong>节点及其子节点点击使用按钮后，在层级窗口中可以发现一个<strong style='color:#f90'>Background 1</strong>和点击使用按钮后，在层级窗口中可以发现一个<strong style='color:#f90'>Background 2</strong>。在资源管理器中可以看到一个点击使用按钮后，在层级窗口中可以发现一个<strong style='color:#f90'>MW_MovingBackground</strong>脚本。",
     "movingBackgroundStep2": "将MW MovingBackground节点拖到Canvas节点下。如果没有Canvas节点的话，请创建一个。给两个子节点添加图片后，运行项目就能看到背景无限移动了。",
 
+    "magnifier": "放大镜",
+    "magnifierIntro": "快速生成一个放大镜。",
+    "magnifierStep1": "点击使用按钮后. 在层级窗口中可以发现一个<strong style='color:#f90'>MW Magnifier</strong>节点. 该节点是从资源管理器里的<strong style='color:#f90'>MW Magnifier</strong>预制中创建出来的。",
+    "magnifierStep2": "将MW Magnifier节点拖到Canvas节点下。如果没有Canvas节点的话，请创建一个。现在给MW Magnifier节点添加一张放大镜图片，图片是资源管理器中的<strong style='color:#f90'>magnifier png</strong>， 再把<strong style='color:#f90'>render-texture</strong>文件设置为摄像机的目标纹理。",
+    "magnifierStep3": "运行项目就可以看到放大镜效果了，你还可以移动这个放大镜。",
+
     /* 视图类 */
     "view": "视图类",
     "zoomView": "手势缩放图",
@@ -93,5 +100,8 @@ module.exports = {
     "pickStarMonsterIntro": "在摘星星游戏里面的紫色怪物。",
 
     "star": "星星",
-    "starIntro": "黄色五角星。"
+    "starIntro": "黄色五角星。",
+
+    "heart": "爱心",
+    "heartIntro": "爱你3000遍。"
 }

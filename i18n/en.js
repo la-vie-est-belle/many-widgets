@@ -5,6 +5,7 @@ module.exports = {
     /* Common */
     "updateWarn": `New version of Many Widgets is on. Check it in Cocos Store. :)`,
     "githubStar": "Star me on GitHub :)",
+    "author": "© still dream",
     "use": "Use",
     "demoHeader": "Demo",
     "demoIntro": "You may click the link or scan the QR code to view the effect of this widget.",
@@ -68,6 +69,12 @@ module.exports = {
     "movingBackgroundStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW MovingBackground node</strong> as well as its children <strong style='color:#f90'>Background 1</strong> and <strong style='color:#f90'>Background 2</strong> in the Hierarchy tab. A <strong style='color:#f90'>MW_MovingBackground script</strong> is created in the assets.",
     "movingBackgroundStep2": "Drag the MW MovingBackground node to under the Canvas. If there is no Canvas, please create one. Now, fill the two children node with sprite frames. Run the project and you will see the moving sprites.",
 
+    "magnifier": "Magnifier",
+    "magnifierIntro": "Quick set-up of a magnifying glass.",
+    "magnifierStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW Magnifier node</strong> in the Hierarchy tab. This node is created from the <strong style='color:#f90'>MW Magnifier prefab</strong> in the assets.",
+    "magnifierStep2": "Drag the MW Magnifier node to under the Canvas. If there is no Canvas, please create one. Now, set the MW Magnifier's spriteframe with <strong style='color:#f90'>magnifier png</strong> in the assets, and set the Camera's target texture with the <strong style='color:#f90'>render-texture</strong>.",
+    "magnifierStep3": "Run the project, and you will see the magnifying effect. You can also move the magnifier.",
+
     /* View */
     "view": "View",
     "zoomView": "Zoom View",
@@ -93,5 +100,8 @@ module.exports = {
     "pickStarMonsterIntro": "The purple monster in the pick star game.",
 
     "star": "Star",
-    "starIntro": "A star with five points."
+    "starIntro": "A star with five points.",
+
+    "heart": "Heart",
+    "heartIntro": "Love you 3000."
 }

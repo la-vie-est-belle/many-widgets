@@ -19,6 +19,7 @@ const Joystick3D = require('../../static/widgets/joystick3D/methods');
 
 /* Sprite */
 const MovingBackground = require('../../static/widgets/moving-background/methods');
+const Magnifier = require('../../static/widgets/magnifier/methods');
 
 /* View */
 const ZoomView = require('../../static/widgets/zoom-view/methods');
@@ -28,6 +29,7 @@ const _2DFollow3D = require('../../static/widgets/2D-follow-3D/methods');
 /* 3D Model */
 const PickStarMonster = require('../../static/widgets/models/pick-star-monster/methods');
 const Star = require('../../static/widgets/models/star/methods');
+const Heart = require('../../static/widgets/models/heart/methods');
 
 // panel event listener
 exports.listeners = {
@@ -79,6 +81,7 @@ exports.ready = function() {
                     ]},
                     {categoryId: 2, categoryName: translate("sprite"), widgets: [
                         {widgetId: 0, widgetName: translate("movingBackground"), intro: translate("movingBackgroundIntro"), videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: translate("magnifier"), intro: translate("magnifierIntro"), videoLink: "https://www.bilibili.com/video/BV1sL4y1a7Rq/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/magnifier/", usage: readFileSync(join(__dirname, "../../static/widgets/magnifier/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 3, categoryName: translate("view"), widgets: [
                         {widgetId: 0, widgetName: translate("zoomView"), intro: translate("zoomViewIntro"), videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
@@ -88,6 +91,7 @@ exports.ready = function() {
                     {categoryId: 4, categoryName: translate("3Dmodel"), widgets: [
                         {widgetId: 0, widgetName: translate("pickStarMonster"), intro: translate("pickStarMonsterIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/pick-star-monster-3Dmodel/", usage: "" },
                         {widgetId: 1, widgetName: translate("star"), intro: translate("starIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/star-3Dmodel/", usage: "" },
+                        {widgetId: 2, widgetName: translate("heart"), intro: translate("heartIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/heart-3Dmodel/", usage: "" },
                     ]},
                 ],
             }
@@ -152,7 +156,10 @@ exports.ready = function() {
                     case this.allWidgets[2].widgets[0].widgetName:
                         MovingBackground.create("MovingBackground");
                         break;
-
+                    case this.allWidgets[2].widgets[1].widgetName:
+                        Magnifier.create("Magnifier");
+                        break;
+    
                     /* View */
                     case this.allWidgets[3].widgets[0].widgetName:
                         ZoomView.create("ZoomView");
@@ -170,6 +177,9 @@ exports.ready = function() {
                         break;
                     case this.allWidgets[4].widgets[1].widgetName:
                         Star.create("Star");
+                        break;
+                    case this.allWidgets[4].widgets[2].widgetName:
+                        Heart.create("Heart");
                         break;
                 }
             },
