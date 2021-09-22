@@ -28,11 +28,6 @@ const _2DFollow3D = require('../../static/widgets/2D-follow-3D/methods');
 
 /* 3D Model */
 const Model = require('../../static/widgets/models/methods')
-// const PickStarMonster = require('../../static/widgets/models/pick-star-monster/methods');
-// const Star = require('../../static/widgets/models/star/methods');
-// const Heart = require('../../static/widgets/models/heart/methods');
-// const Dice = require('../../static/widgets/models/dice/methods');
-// const Football = require('../../static/widgets/models/football/methods');
 
 // panel event listener
 exports.listeners = {
