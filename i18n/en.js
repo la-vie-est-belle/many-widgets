@@ -94,7 +94,7 @@ module.exports = {
     "2Dfollow3DStep2": "MW 2DFollow3D node, which is empty, should be under the Canvas node. Now add the label component or progress bar component or any other 2D component you like onto MW 2DFollow3D node.",
     "2Dfollow3DStep3": "In your script, call <strong style='color:#f90'>follow()</strong> to let the 2D node (caller) follow a 3D node.",
 
-    /* 3D Model */
+    /* 3D Model */  
     "3Dmodel": "3D Model",
     "pickStarMonster": "Pick Star Monster",
     "pickStarMonsterIntro": "The purple monster in the pick star game.",
@@ -103,5 +103,11 @@ module.exports = {
     "starIntro": "A star with five points.",
 
     "heart": "Heart",
-    "heartIntro": "Love you 3000."
+    "heartIntro": "Love you 3000.",
+
+    "dice": "Dice",
+    "diceIntro": "Let's throw the dice!",
+
+    "football": "Football",
+    "footballIntro": "Are you a fan of football?",
 }

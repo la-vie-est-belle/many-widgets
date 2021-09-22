@@ -103,5 +103,11 @@ module.exports = {
     "starIntro": "黄色五角星。",
 
     "heart": "爱心",
-    "heartIntro": "爱你3000遍。"
+    "heartIntro": "爱你3000遍。",
+
+    "dice": "骰子",
+    "diceIntro": "来！扔骰子！",
+
+    "football": "足球",
+    "footballIntro": "你喜欢踢足球吗？",
 }

@@ -27,9 +27,12 @@ const BeginnerGuide = require('../../static/widgets/beginner-guide/methods');
 const _2DFollow3D = require('../../static/widgets/2D-follow-3D/methods');
 
 /* 3D Model */
-const PickStarMonster = require('../../static/widgets/models/pick-star-monster/methods');
-const Star = require('../../static/widgets/models/star/methods');
-const Heart = require('../../static/widgets/models/heart/methods');
+const Model = require('../../static/widgets/models/methods')
+// const PickStarMonster = require('../../static/widgets/models/pick-star-monster/methods');
+// const Star = require('../../static/widgets/models/star/methods');
+// const Heart = require('../../static/widgets/models/heart/methods');
+// const Dice = require('../../static/widgets/models/dice/methods');
+// const Football = require('../../static/widgets/models/football/methods');
 
 // panel event listener
 exports.listeners = {
@@ -92,6 +95,8 @@ exports.ready = function() {
                         {widgetId: 0, widgetName: translate("pickStarMonster"), intro: translate("pickStarMonsterIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/pick-star-monster-3Dmodel/", usage: "" },
                         {widgetId: 1, widgetName: translate("star"), intro: translate("starIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/star-3Dmodel/", usage: "" },
                         {widgetId: 2, widgetName: translate("heart"), intro: translate("heartIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/heart-3Dmodel/", usage: "" },
+                        {widgetId: 3, widgetName: translate("dice"), intro: translate("diceIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/dice-3Dmodel/", usage: "" },
+                        {widgetId: 4, widgetName: translate("football"), intro: translate("footballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/football-3Dmodel/", usage: "" },
                     ]},
                 ],
             }
@@ -173,13 +178,19 @@ exports.ready = function() {
 
                     /* 3D Model */
                     case this.allWidgets[4].widgets[0].widgetName:
-                        PickStarMonster.create("PickStarMonster");
+                        Model.create("PickStarMonster");
                         break;
                     case this.allWidgets[4].widgets[1].widgetName:
-                        Star.create("Star");
+                        Model.create("Star");
                         break;
                     case this.allWidgets[4].widgets[2].widgetName:
-                        Heart.create("Heart");
+                        Model.create("Heart");
+                        break;
+                    case this.allWidgets[4].widgets[3].widgetName:
+                        Model.create("Dice");
+                        break;
+                    case this.allWidgets[4].widgets[4].widgetName:
+                        Model.create("Football");
                         break;
                 }
             },
