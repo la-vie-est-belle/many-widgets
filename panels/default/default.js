@@ -97,6 +97,7 @@ exports.ready = function() {
                         {widgetId: 2, widgetName: translate("heart"), intro: translate("heartIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/heart-3Dmodel/", usage: "" },
                         {widgetId: 3, widgetName: translate("dice"), intro: translate("diceIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/dice-3Dmodel/", usage: "" },
                         {widgetId: 4, widgetName: translate("football"), intro: translate("footballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/football-3Dmodel/", usage: "" },
+                        {widgetId: 5, widgetName: translate("cartoonTree"), intro: translate("cartoonTreeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/cartoon-tree-3Dmodel/", usage: "" },
                     ]},
                 ],
             }
@@ -191,6 +192,9 @@ exports.ready = function() {
                         break;
                     case this.allWidgets[4].widgets[4].widgetName:
                         Model.create("Football");
+                        break;
+                    case this.allWidgets[4].widgets[5].widgetName:
+                        Model.create("CartoonTree");
                         break;
                 }
             },

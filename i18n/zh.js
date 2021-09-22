@@ -110,4 +110,7 @@ module.exports = {
 
     "football": "足球",
     "footballIntro": "你喜欢踢足球吗？",
+
+    "cartoonTree": "卡通树",
+    "cartoonTreeIntro": "这是棵树，没开玩笑。",
 }

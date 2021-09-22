@@ -110,4 +110,7 @@ module.exports = {
 
     "football": "Football",
     "footballIntro": "Are you a fan of football?",
+
+    "cartoonTree": "Cartoon Tree",
+    "cartoonTreeIntro": "This is a tree. No kidding.",
 }
