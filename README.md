@@ -31,6 +31,9 @@ Supported Cocos Creator version: 3.x.
 1. Pick Star Monster
 2. Star
 3. Heart
+4. Dice
+5. Football
+6. Cartoon Tree
 
 <br>
 
@@ -99,6 +102,15 @@ Supported Cocos Creator version: 3.x.
 
 3. Heart
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/heart-3Dmodel/
+
+4. Dice
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/dice-3Dmodel/
+
+5. Football
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/football-3Dmodel/
+
+6. Cartoon Tree
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/cartoon-tree-3Dmodel/
 
 <br/>
 <br/>
