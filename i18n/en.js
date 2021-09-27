@@ -3,7 +3,7 @@ module.exports = {
     "open": "open",
 
     /* Common */
-    "updateWarn": `New version of Many Widgets is on. Check it in Cocos Store. :)`,
+    "updateWarn": `New version of Many Widgets is on. Check it in Cocos Store now. :)`,
     "githubStar": "Star me on GitHub :)",
     "author": "© still dream",
     "use": "Use",
@@ -75,6 +75,12 @@ module.exports = {
     "magnifierStep2": "Drag the MW Magnifier node to under the Canvas. If there is no Canvas, please create one. Now, set the MW Magnifier's spriteframe with <strong style='color:#f90'>magnifier png</strong> in the assets, and set the Camera's target texture with the <strong style='color:#f90'>render-texture</strong>.",
     "magnifierStep3": "Run the project, and you will see the magnifying effect. You can also move the magnifier.",
 
+    "phantom": "Phantom",
+    "phantomIntro": "Quick set-up of trailing effect.",
+    "phantomStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW Phantom node</strong> in the Hierarchy tab and the <strong style='color:#f90'>MW_Phantom script</strong> in the assets.",
+    "phantomStep2": "Drag the MW Phantom node to under the Canvas. If there is no Canvas, please create one. Then drag to <strong style='color:#f90'>MWPhantom</strong> component the target node where you want to add the phantom.",
+    "phantomStep3": "In you own script, make the target node move and you will see the trailing effect after running the project.",
+
     /* View */
     "view": "View",
     "zoomView": "Zoom View",
@@ -113,4 +119,10 @@ module.exports = {
 
     "cartoonTree": "Cartoon Tree",
     "cartoonTreeIntro": "This is a tree. No kidding.",
+
+    "basketball": "Basketball",
+    "basketballIntro": "A three-point shot, nice!",
+
+    "axe": "Axe",
+    "axeIntro": "Let's chop some firewood.",
 }

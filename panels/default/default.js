@@ -20,6 +20,7 @@ const Joystick3D = require('../../static/widgets/joystick3D/methods');
 /* Sprite */
 const MovingBackground = require('../../static/widgets/moving-background/methods');
 const Magnifier = require('../../static/widgets/magnifier/methods');
+const Phantom = require('../../static/widgets/phantom/methods');
 
 /* View */
 const ZoomView = require('../../static/widgets/zoom-view/methods');
@@ -80,6 +81,7 @@ exports.ready = function() {
                     {categoryId: 2, categoryName: translate("sprite"), widgets: [
                         {widgetId: 0, widgetName: translate("movingBackground"), intro: translate("movingBackgroundIntro"), videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
                         {widgetId: 1, widgetName: translate("magnifier"), intro: translate("magnifierIntro"), videoLink: "https://www.bilibili.com/video/BV1sL4y1a7Rq/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/magnifier/", usage: readFileSync(join(__dirname, "../../static/widgets/magnifier/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: translate("phantom"), intro: translate("phantomIntro"), videoLink: "https://www.bilibili.com/video/BV19b4y1y7E4/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/phantom/", usage: readFileSync(join(__dirname, "../../static/widgets/phantom/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 3, categoryName: translate("view"), widgets: [
                         {widgetId: 0, widgetName: translate("zoomView"), intro: translate("zoomViewIntro"), videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
@@ -93,6 +95,8 @@ exports.ready = function() {
                         {widgetId: 3, widgetName: translate("dice"), intro: translate("diceIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/dice-3Dmodel/", usage: "" },
                         {widgetId: 4, widgetName: translate("football"), intro: translate("footballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/football-3Dmodel/", usage: "" },
                         {widgetId: 5, widgetName: translate("cartoonTree"), intro: translate("cartoonTreeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/cartoon-tree-3Dmodel/", usage: "" },
+                        {widgetId: 6, widgetName: translate("basketball"), intro: translate("basketballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/basketball-3Dmodel/", usage: "" },
+                        {widgetId: 7, widgetName: translate("axe"), intro: translate("axeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/axe-3Dmodel/", usage: "" },
                     ]},
                 ],
             }
@@ -160,6 +164,9 @@ exports.ready = function() {
                     case this.allWidgets[2].widgets[1].widgetName:
                         Magnifier.create("Magnifier");
                         break;
+                    case this.allWidgets[2].widgets[2].widgetName:
+                        Phantom.create("Phantom");
+                        break;
     
                     /* View */
                     case this.allWidgets[3].widgets[0].widgetName:
@@ -190,6 +197,12 @@ exports.ready = function() {
                         break;
                     case this.allWidgets[4].widgets[5].widgetName:
                         Model.create("CartoonTree");
+                        break;
+                    case this.allWidgets[4].widgets[6].widgetName:
+                        Model.create("Basketball");
+                        break;
+                    case this.allWidgets[4].widgets[7].widgetName:
+                        Model.create("Axe");
                         break;
                 }
             },

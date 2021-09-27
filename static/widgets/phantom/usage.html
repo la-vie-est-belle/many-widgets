@@ -1,0 +1,50 @@
+<html>
+    <header>
+        <style>
+            p {
+                text-align: justify;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step1"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.phantomStep1"></ui-label></p>
+        </div>
+        <br />
+        
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step2"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.phantomStep2"></ui-label></p>
+        </div>
+        <br />
+
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step3"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.phantomStep3"></ui-label></p>
+        </div>
+        <br />
+
+        <div>
+            <h3>API:</h3>
+            <ui-code language="typescript">
+                /*
+                Set the target node where you want to add the phantom.
+                You may directly drag the node onto MWPhantom component in the editor.
+                */
+                setTarget(target: Node)
+
+                /*
+                Show the trailing effect. It is shown by default.
+                */
+                show()
+
+                /*
+                Hide the trailing effect.
+                */
+                hide()
+            </ui-code>
+        </div>
+    </body>
+</html>
