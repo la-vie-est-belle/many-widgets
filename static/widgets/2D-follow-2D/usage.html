@@ -1,0 +1,48 @@
+<html>
+    <header>
+        <style>
+            p {
+                text-align: justify;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step1"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.2Dfollow2DStep1"></ui-label></p>
+        </div>
+        <br />
+        
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step2"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.2Dfollow2DStep2"></ui-label></p>
+        </div>
+        <br />
+
+        <div>
+            <h3>API:</h3>
+            <ui-code language="typescript">
+                /*
+                Change the target to follow.
+                */
+                setTarget(target: Node)
+
+                /*
+                Change the node speed. The default is 100.
+                */
+                setSpeed(value: number)
+                
+                /*
+                Start following the target node.
+                */
+                startFollow(target: Node)
+
+                /*
+                Stop following the target node.
+                */
+                stopFollow()
+            </ui-code>
+        </div>
+    </body>
+</html>

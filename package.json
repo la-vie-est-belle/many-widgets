@@ -1,7 +1,7 @@
 {
     "name": "many-widgets",
     "package_version": 2,
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Here are many widgets for you. :)",
     "author": "la vie est belle",
     "main": "browser.js",

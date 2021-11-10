@@ -23,8 +23,9 @@ Supported Cocos Creator version: 3.x.
 10. Joystick 2D
 11. Joystick 3D
 12. 2D Follow 3D (Use it on player's name or blood progress bar)
-13. Magnifier
-14. Phantom (trailing effect)
+13. 2D Follow 2D (Use it on a tracking missile)
+14. Magnifier
+15. Phantom (trailing effect)
 
 <br/>
 
@@ -37,6 +38,8 @@ Supported Cocos Creator version: 3.x.
 6. Cartoon Tree
 7. Basketball
 8. Axe
+9. Shield
+10. Bat
 
 <br>
 
@@ -89,11 +92,15 @@ Supported Cocos Creator version: 3.x.
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/2D-follow-3D/
 - video: https://www.bilibili.com/video/BV1nU4y177Qh/
 
-13. Magnifier
+13. 2D Follow 2D
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/2D-follow-2D/
+- video: https://www.bilibili.com/video/BV1mL4y1q7vG/
+
+14. Magnifier
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/magnifier/
 - video: https://www.bilibili.com/video/BV1sL4y1a7Rq/
 
-14. Phantom
+15. Phantom
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/phantom/
 - video: https://www.bilibili.com/video/BV19b4y1y7E4/
 
@@ -124,6 +131,12 @@ Supported Cocos Creator version: 3.x.
 
 8. Axe
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/axe-3Dmodel/
+
+9. Shield
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shield-3Dmodel/
+
+10. Bat
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/bat-3Dmodel/
 
 <br/>
 <br/>

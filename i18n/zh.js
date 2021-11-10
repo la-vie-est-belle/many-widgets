@@ -100,6 +100,11 @@ module.exports = {
     "2Dfollow3DStep2": "MW 2DFollow3D(初始时是空节点), 记得要将它拖到Canvas节点下，现在你可以给MW 2DFollow3D节点加上Label组件或者Progress Bar组件。",
     "2Dfollow3DStep3": "在其他脚本中，调用<strong style='color:#f90'>follow()</strong>方法让2D节点(调用者)跟随一个3D节点。",
 
+    "2Dfollow2D": "2D节点跟随2D节点",
+    "2Dfollow2DIntro": "让一个2D节点跟随一个2D节点，可用于导弹跟踪或其他类似的物体。",
+    "2Dfollow2DStep1": "点击使用按钮后，在资源管理中会有一个<strong style='color:#f90'>MW_2DFollow3D</strong>脚本。",
+    "2Dfollow2DStep2": "将MW_2DFollow2D脚本挂载到要实现跟随效果的节点上. 在你自己的代码中，调用<strong style='color:#f90'>startFollow()</strong>让它跟随目标节点。现在运行项目，你就可以看到跟随效果了。",
+
     /* 3D Model */
     "3Dmodel": "3D 模型",
     "pickStarMonster": "摘星星的怪物",
@@ -125,4 +130,10 @@ module.exports = {
 
     "axe": "斧头",
     "axeIntro": "砍些柴火吧。",
+
+    "shield": "盾牌",
+    "shieldIntro": "保护好自己。",
+
+    "bat": "球棒",
+    "batIntro": "全垒打！",
 }

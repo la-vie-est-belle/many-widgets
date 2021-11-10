@@ -100,6 +100,11 @@ module.exports = {
     "2Dfollow3DStep2": "MW 2DFollow3D node, which is empty, should be under the Canvas node. Now add the label component or progress bar component or any other 2D component you like onto MW 2DFollow3D node.",
     "2Dfollow3DStep3": "In your script, call <strong style='color:#f90'>follow()</strong> to let the 2D node (caller) follow a 3D node.",
 
+    "2Dfollow2D": "2D Follow 2D",
+    "2Dfollow2DIntro": "Make a 2D node follow a 2D node. You may use it on a tracking missile or something like that.",
+    "2Dfollow2DStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_2DFollow2D script</strong> in the assets.",
+    "2Dfollow2DStep2": "Make the MW_2DFollow2D script a component of the node which will have the following effect. In your script, call <strong style='color:#f90'>startFollow()</strong> to let the node follow the target. Now, start the project and you will see the effect.",
+
     /* 3D Model */  
     "3Dmodel": "3D Model",
     "pickStarMonster": "Pick Star Monster",
@@ -125,4 +130,10 @@ module.exports = {
 
     "axe": "Axe",
     "axeIntro": "Let's chop some firewood.",
+
+    "shield": "Shield",
+    "shieldIntro": "Protect yourself.",
+
+    "bat": "Bat",
+    "batIntro": "Homerun!",
 }
