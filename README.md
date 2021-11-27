@@ -10,7 +10,7 @@ Supported Cocos Creator version: 3.x.
 
 <br/>
 
-## Widgets Up To Now:
+## Components Up To Now:
 1. Typer
 2. Bullet Screen
 3. Rolling Number
@@ -26,6 +26,13 @@ Supported Cocos Creator version: 3.x.
 13. 2D Follow 2D (Use it on a tracking missile)
 14. Magnifier
 15. Phantom (trailing effect)
+
+<br/>
+
+## Shaders Up To Now:
+1. Aging
+2. Frozen
+3. Poisonous
 
 <br/>
 
@@ -107,6 +114,19 @@ Supported Cocos Creator version: 3.x.
 <br/>
 <br/>
 
+## Shader:
+1. Aging
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-aging/
+
+2. Frozen
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-frozen/
+
+3. Poisonous
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-poisonous/
+
+<br/>
+<br/>
+
 ## 3D Models Demos:
 1. Pick Star Monster
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/pick-star-monster-3Dmodel/
@@ -143,7 +163,7 @@ Supported Cocos Creator version: 3.x.
 
 ## Docs:
 You may find the `demo link` and `How to use` sections in the plugin panel.
-<img src="https://img-blog.csdnimg.cn/2cde638a1a00426d85d1ce28ed1a9566.png" width="300">
+<img src="https://img-blog.csdnimg.cn/87d40bdc8c564c5a87a627d0266d19b0.png" width="300">
 <br/>
 <br/>
 

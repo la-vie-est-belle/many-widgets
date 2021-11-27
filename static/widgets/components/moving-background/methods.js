@@ -1,10 +1,11 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
-var Joystick3D = {
+var MovingBackground = {
     parentNodeUUID: "",
-    childNodeUUID: "",
+    bg1NodeUUID: "",
+    bg2NodeUUID: "",
 
     create: function(widgetName) {
         let self = this;
@@ -34,7 +35,8 @@ var Joystick3D = {
         let newNodeName = "MW " + widgetName;
         return Editor.Message.request("scene", "create-node", {name: newNodeName}).then(function(newParentNodeUUID) {
             self.parentNodeUUID = newParentNodeUUID;
-            Editor.Message.request("scene", "create-node", {parent: newParentNodeUUID, name: "Center Button"}).then(function(newChildNodeUUID){self.childNodeUUID=newChildNodeUUID;});
+            Editor.Message.request("scene", "create-node", {parent: newParentNodeUUID, name: "Backgraound 1"}).then(function(newChildNodeUUID){self.bg1NodeUUID=newChildNodeUUID;});
+            Editor.Message.request("scene", "create-node", {parent: newParentNodeUUID, name: "Backgraound 2"}).then(function(newChildNodeUUID){self.bg2NodeUUID=newChildNodeUUID});
         });
     },
 
@@ -53,12 +55,12 @@ var Joystick3D = {
             /* Add script for parent node. */
             let componentName = "MW"+ widgetName;
             Editor.Message.request("scene", "create-component", {uuid: self.parentNodeUUID, component: componentName});
-            Editor.Message.request("scene", "create-component", {uuid: self.parentNodeUUID, component: "cc.Sprite"});
-
+            
             /* Add cc.Sprite for child node. */
-            Editor.Message.request("scene", "create-component", {uuid: self.childNodeUUID, component: "cc.Sprite"});
+            Editor.Message.request("scene", "create-component", {uuid: self.bg1NodeUUID, component: "cc.Sprite"});
+            Editor.Message.request("scene", "create-component", {uuid: self.bg2NodeUUID, component: "cc.Sprite"});
         }, 500);
     }
 }
 
-module.exports = Joystick3D;
+module.exports = MovingBackground;

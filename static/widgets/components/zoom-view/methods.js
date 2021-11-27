@@ -1,8 +1,11 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
-var Typer = {
+var ZoomView = {
+    parentNodeUUID: "",
+    spriteNodeUUID: "",
+
     create: function(widgetName) {
         let self = this;
         Promise.resolve().then(function() {
@@ -27,8 +30,13 @@ var Typer = {
         This new node will be added under the currently selected node.
         If no node selected, scene will the new node's parent.
         */
+
+        let self = this;
         let newNodeName = "MW " + widgetName;
-        return Editor.Message.request("scene", "create-node", {name: newNodeName});
+        return Editor.Message.request("scene", "create-node", {name: newNodeName}).then(function(newParentNodeUUID) {
+            self.parentNodeUUID = newParentNodeUUID;
+            Editor.Message.request("scene", "create-node", {parent: newParentNodeUUID, name: "Sprite"}).then(function(newChildNodeUUID){self.spriteNodeUUID=newChildNodeUUID;});
+        });
     },
 
     addComponentsForNode: function(newNodeUUID, widgetName) {
@@ -36,17 +44,22 @@ var Typer = {
         Add components for this node.
         Thought I could just use create-node to add components, but failed. Don't know why.
         */
-        Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: "cc.Label"});
 
         /* 
         Must use setTimeout. 
         Otherwise, the editor will report <fail to get class>. 
         */
+        let self = this;
         setTimeout(function() {
+            /* Add script for parent node. */
             let componentName = "MW"+ widgetName;
-            Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: componentName});
+            Editor.Message.request("scene", "create-component", {uuid: self.parentNodeUUID, component: componentName});
+            Editor.Message.request("scene", "create-component", {uuid: self.parentNodeUUID, component: "cc.Mask"});
+            
+            /* Add cc.Sprite for child node. */
+            Editor.Message.request("scene", "create-component", {uuid: self.spriteNodeUUID, component: "cc.Sprite"});
         }, 500);
     }
 }
 
-module.exports = Typer;
+module.exports = ZoomView;

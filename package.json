@@ -1,14 +1,14 @@
 {
     "name": "many-widgets",
     "package_version": 2,
-    "version": "1.0.9",
+    "version": "1.10.0",
     "description": "Here are many widgets for you. :)",
-    "author": "la vie est belle",
+    "author": "ren_meng",
     "main": "browser.js",
 
     "panels": {
         "default": {
-            "title": "widgets panel",
+            "title": "Many Widgets",
             "type": "dockable",
             "main": "./panels/default/default.js",
             "icon": "./static/icons/default.png",

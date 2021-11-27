@@ -1,6 +1,6 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
 var BeginnerGuide = {
     parentNodeUUID: "",

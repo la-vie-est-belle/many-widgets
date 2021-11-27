@@ -1,12 +1,17 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
-var ComboBox = {
+var Magnifier = {
     create: function(widgetName) {
         let self = this;
         Promise.resolve().then(function() {
             return self.createScript(widgetName);
+        })
+        .then(function() {
+            self.createRT(widgetName);
+            self.createPNG(widgetName);
+            return Promise.resolve();
         })
         .then(function() {
             return self.createPrefab(widgetName);
@@ -26,8 +31,20 @@ var ComboBox = {
     },
 
     createPrefab: function(widgetName) {
-        let source = join(__dirname, "./assets/MW ComboBox.prefab");
-        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "MW ComboBox.prefab";
+        let source = join(__dirname, "./assets/MW Magnifier.prefab");
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "MW Magnifier.prefab";
+        return Editor.Message.request("asset-db", "import-asset", source, target);
+    },
+
+    createRT: function(widgetName) {
+        let source = join(__dirname, "./assets/render-texture.rt");
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "render-texture.rt";
+        return Editor.Message.request("asset-db", "import-asset", source, target);
+    },
+
+    createPNG: function(widgetName) {
+        let source = join(__dirname, "./assets/magnifier.png");
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "magnifier.png";
         return Editor.Message.request("asset-db", "import-asset", source, target);
     },
 
@@ -50,7 +67,6 @@ var ComboBox = {
         Must use setTimeout. 
         Otherwise, the editor will report <fail to get class>. 
         */
-        let self = this;
         setTimeout(function() {
             /* Add script for parent node. */
             let componentName = "MW"+ widgetName;
@@ -59,4 +75,4 @@ var ComboBox = {
     }
 }
 
-module.exports = ComboBox;
+module.exports = Magnifier;

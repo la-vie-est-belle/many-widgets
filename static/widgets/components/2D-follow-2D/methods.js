@@ -1,6 +1,6 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
 var _2DFollow2D = {
     create: function(widgetName) {

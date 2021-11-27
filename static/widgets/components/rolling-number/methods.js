@@ -1,8 +1,8 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
-var Phantom = {
+var RollingNumber = {
     create: function(widgetName) {
         let self = this;
         Promise.resolve().then(function() {
@@ -12,6 +12,7 @@ var Phantom = {
             return self.createNode(widgetName);
         })
         .then(function(newNodeUUID) {
+            self.createPrefab(widgetName);
             self.addComponentsForNode(newNodeUUID, widgetName);
         });
     },
@@ -31,7 +32,20 @@ var Phantom = {
         return Editor.Message.request("scene", "create-node", {name: newNodeName});
     },
 
+    createPrefab: function(widgetName) {
+        let source = join(__dirname, "./assets/Child Layout.prefab");
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "Child Layout.prefab";
+        return Editor.Message.request("asset-db", "import-asset", source, target);
+    },
+
     addComponentsForNode: function(newNodeUUID, widgetName) {
+        /*
+        Add components for this node.
+        Thought I could just use create-node to add components, but failed. Don't know why.
+        */
+        Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: "cc.Layout"});
+        Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: "cc.Mask"});
+
         /* 
         Must use setTimeout. 
         Otherwise, the editor will report <fail to get class>. 
@@ -43,4 +57,4 @@ var Phantom = {
     }
 }
 
-module.exports = Phantom;
+module.exports = RollingNumber;

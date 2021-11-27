@@ -1,8 +1,8 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
-var SpinBox = {
+var ComboBox = {
     create: function(widgetName) {
         let self = this;
         Promise.resolve().then(function() {
@@ -26,8 +26,8 @@ var SpinBox = {
     },
 
     createPrefab: function(widgetName) {
-        let source = join(__dirname, "./assets/MW SpinBox.prefab");
-        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "MW SpinBox.prefab";
+        let source = join(__dirname, "./assets/MW ComboBox.prefab");
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "MW ComboBox.prefab";
         return Editor.Message.request("asset-db", "import-asset", source, target);
     },
 
@@ -59,4 +59,4 @@ var SpinBox = {
     }
 }
 
-module.exports = SpinBox;
+module.exports = ComboBox;

@@ -1,19 +1,22 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
-var _2DFollow3D = {
+var BulletSceen = {
     create: function(widgetName) {
         let self = this;
         Promise.resolve().then(function() {
             return self.createScript(widgetName);
         })
         .then(function() {
+            return self.createPrefab(widgetName);
+        })
+        .then(function() {
             return self.createNode(widgetName);
         })
         .then(function(newNodeUUID) {
             self.addComponentsForNode(newNodeUUID, widgetName);
-        });
+        })
     },
 
     createScript: function(widgetName) {
@@ -21,6 +24,13 @@ var _2DFollow3D = {
         let content = readFileSync(join(__dirname, "content.ts"), "utf-8");
         return Editor.Message.request("asset-db", "create-asset", url, content);
     },
+
+    createPrefab: function(widgetName) {
+        let source = join(__dirname, "./assets/Bullet Screen.prefab");
+        let target = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "Bullet Screen.prefab";
+        return Editor.Message.request("asset-db", "import-asset", source, target);
+    },
+
 
     createNode: function(widgetName) {
         /* 
@@ -32,15 +42,22 @@ var _2DFollow3D = {
     },
 
     addComponentsForNode: function(newNodeUUID, widgetName) {
+        /*
+        Add components for this node.
+        Thought I could just use create-node to add components, but failed. Don't know why.
+        */
+
         /* 
         Must use setTimeout. 
         Otherwise, the editor will report <fail to get class>. 
         */
+        let self = this;
         setTimeout(function() {
+            /* Add script for parent node. */
             let componentName = "MW"+ widgetName;
             Editor.Message.request("scene", "create-component", {uuid: newNodeUUID, component: componentName});
         }, 500);
     }
 }
 
-module.exports = _2DFollow3D;
+module.exports = BulletSceen;

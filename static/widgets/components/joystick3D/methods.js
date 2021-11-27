@@ -1,8 +1,8 @@
 const { join } = require('path');
 const { readFileSync } = require('fs');
-const packageJSON = require('../../../package.json');
+const packageJSON = require('../../../../package.json');
 
-var Joystick2D = {
+var Joystick3D = {
     parentNodeUUID: "",
     childNodeUUID: "",
 
@@ -61,4 +61,4 @@ var Joystick2D = {
     }
 }
 
-module.exports = Joystick2D;
+module.exports = Joystick3D;

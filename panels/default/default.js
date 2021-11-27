@@ -5,31 +5,30 @@ const Vue = require('../../static/third-modules/vue');
 const axios = require('../../static/third-modules/axios');
 const packageJSON = require('../../package.json');
 
-/* Label */
-const Typer = require('../../static/widgets/typer/methods');
-const BulletScreen = require('../../static/widgets/bullet-screen/methods');
-const RollingNumber = require('../../static/widgets/rolling-number/methods');
-const Tooltip = require('../../static/widgets/tooltip/methods');
+/* Component */
+const BeginnerGuide = require('../../static/widgets/components/beginner-guide/methods');
+const BulletScreen = require('../../static/widgets/components/bullet-screen/methods');
+const ComboBox = require('../../static/widgets/components/combo-box/methods');
+const Joystick2D = require('../../static/widgets/components/joystick2D/methods');
+const Joystick3D = require('../../static/widgets/components/joystick3D/methods');
+const Magnifier = require('../../static/widgets/components/magnifier/methods');
+const MovingBackground = require('../../static/widgets/components/moving-background/methods');
+const Phantom = require('../../static/widgets/components/phantom/methods');
+const RollingNumber = require('../../static/widgets/components/rolling-number/methods');
+const SpinBox = require('../../static/widgets/components/spin-box/methods');
+const Tooltip = require('../../static/widgets/components/tooltip/methods');
+const Typer = require('../../static/widgets/components/typer/methods');
+const ZoomView = require('../../static/widgets/components/zoom-view/methods');
+const _2DFollow2D = require('../../static/widgets/components/2D-follow-2D/methods');
+const _2DFollow3D = require('../../static/widgets/components/2D-follow-3D/methods');
 
-/* Button */
-const ComboBox = require('../../static/widgets/combo-box/methods');
-const SpinBox = require('../../static/widgets/spin-box/methods');
-const Joystick2D = require('../../static/widgets/joystick2D/methods');
-const Joystick3D = require('../../static/widgets/joystick3D/methods');
-
-/* Sprite */
-const MovingBackground = require('../../static/widgets/moving-background/methods');
-const Magnifier = require('../../static/widgets/magnifier/methods');
-const Phantom = require('../../static/widgets/phantom/methods');
-
-/* View */
-const ZoomView = require('../../static/widgets/zoom-view/methods');
-const BeginnerGuide = require('../../static/widgets/beginner-guide/methods');
-const _2DFollow3D = require('../../static/widgets/2D-follow-3D/methods');
-const _2DFollow2D = require('../../static/widgets/2D-follow-2D/methods');
+/* Shader */
+const Aging = require('../../static/widgets/shaders/aging/methods');
+const Frozen = require('../../static/widgets/shaders/frozen/methods');
+const Poisonous = require('../../static/widgets/shaders/poisonous/methods');
 
 /* 3D Model */
-const Model = require('../../static/widgets/models/methods')
+const Model = require('../../static/widgets/models/methods');
 
 // panel event listener
 exports.listeners = {
@@ -67,40 +66,39 @@ exports.ready = function() {
                 currentVersion: packageJSON.version,
 
                 allWidgets: [
-                    {categoryId: 0, categoryName: translate("label"), widgets: [
-                        {widgetId: 0, widgetName: translate("typer"), intro: translate("typerIntro"), videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/typer/", usage: readFileSync(join(__dirname, "../../static/widgets/typer/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: translate("bulletScreen"), intro: translate("bulletScreenIntro"), videoLink: "https://www.bilibili.com/video/BV1g341167jA/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/bullet-screen/", usage: readFileSync(join(__dirname, "../../static/widgets/bullet-screen/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: translate("rollingNumber"), intro: translate("rollingNumberIntro"), videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/rolling-number/usage.html"), "utf-8")},
-                        {widgetId: 3, widgetName: translate("tooltip"), intro: translate("tooltipIntro"), videoLink: "https://www.bilibili.com/video/BV1zv411N79f/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/tooltip", usage: readFileSync(join(__dirname, "../../static/widgets/tooltip/usage.html"), "utf-8")}
+                    {categoryId: 0, categoryName: translate("component"), widgets: [
+                        {widgetId: 0, widgetName: translate("beginnerGuide"), intro: translate("beginnerGuideIntro"), videoLink: "https://www.bilibili.com/video/BV1g64y1e7R6/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/components/beginner-guide/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: translate("bulletScreen"), intro: translate("bulletScreenIntro"), videoLink: "https://www.bilibili.com/video/BV1g341167jA/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/bullet-screen/", usage: readFileSync(join(__dirname, "../../static/widgets/components/bullet-screen/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: translate("comboBox"), intro: translate("comboBoxIntro"), videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/components/combo-box/usage.html"), "utf-8")},
+                        {widgetId: 3, widgetName: translate("joystick2D"), intro: translate("joystick2DIntro"), videoLink: "https://www.bilibili.com/video/BV1LP4y1W73z/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/joystick2D/", usage: readFileSync(join(__dirname, "../../static/widgets/components/joystick2D/usage.html"), "utf-8")},
+                        {widgetId: 4, widgetName: translate("joystick3D"), intro: translate("joystick3DIntro"), videoLink: "https://www.bilibili.com/video/BV1w64y1Y7Xm/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/joystick3D/", usage: readFileSync(join(__dirname, "../../static/widgets/components/joystick3D/usage.html"), "utf-8")},
+                        {widgetId: 5, widgetName: translate("magnifier"), intro: translate("magnifierIntro"), videoLink: "https://www.bilibili.com/video/BV1sL4y1a7Rq/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/magnifier/", usage: readFileSync(join(__dirname, "../../static/widgets/components/magnifier/usage.html"), "utf-8")},
+                        {widgetId: 6, widgetName: translate("movingBackground"), intro: translate("movingBackgroundIntro"), videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/components/moving-background/usage.html"), "utf-8")},
+                        {widgetId: 7, widgetName: translate("phantom"), intro: translate("phantomIntro"), videoLink: "https://www.bilibili.com/video/BV19b4y1y7E4/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/phantom/", usage: readFileSync(join(__dirname, "../../static/widgets/components/phantom/usage.html"), "utf-8")},
+                        {widgetId: 8, widgetName: translate("rollingNumber"), intro: translate("rollingNumberIntro"), videoLink: "https://www.bilibili.com/video/BV1jP4y1s7DY/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/rolling-number", usage: readFileSync(join(__dirname, "../../static/widgets/components/rolling-number/usage.html"), "utf-8")},
+                        {widgetId: 9, widgetName: translate("spinBox"), intro: translate("spinBoxIntro"), videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/spin-box/", usage: readFileSync(join(__dirname, "../../static/widgets/components/spin-box/usage.html"), "utf-8")},
+                        {widgetId: 10, widgetName: translate("tooltip"), intro: translate("tooltipIntro"), videoLink: "https://www.bilibili.com/video/BV1zv411N79f/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/tooltip", usage: readFileSync(join(__dirname, "../../static/widgets/components/tooltip/usage.html"), "utf-8")},
+                        {widgetId: 11, widgetName: translate("typer"), intro: translate("typerIntro"), videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/typer/", usage: readFileSync(join(__dirname, "../../static/widgets/components/typer/usage.html"), "utf-8")},
+                        {widgetId: 12, widgetName: translate("zoomView"), intro: translate("zoomViewIntro"), videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/components/zoom-view/usage.html"), "utf-8")},
+                        {widgetId: 13, widgetName: translate("2Dfollow2D"), intro: translate("2Dfollow2DIntro"), videoLink: "https://www.bilibili.com/video/BV1mL4y1q7vG/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/2D-follow-2D/", usage: readFileSync(join(__dirname, "../../static/widgets/components/2D-follow-2D/usage.html"), "utf-8")},
+                        {widgetId: 14, widgetName: translate("2Dfollow3D"), intro: translate("2Dfollow3DIntro"), videoLink: "https://www.bilibili.com/video/BV1nU4y177Qh/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/2D-follow-3D/", usage: readFileSync(join(__dirname, "../../static/widgets/components/2D-follow-3D/usage.html"), "utf-8")},
                     ]},
-                    {categoryId: 1, categoryName: translate("button"), widgets: [
-                        {widgetId: 0, widgetName: translate("comboBox"), intro: translate("comboBoxIntro"), videoLink: "https://www.bilibili.com/video/BV113411q7vJ/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/combo-box/", usage: readFileSync(join(__dirname, "../../static/widgets/combo-box/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: translate("spinBox"), intro: translate("spinBoxIntro"), videoLink: "https://www.bilibili.com/video/BV1df4y137gY/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/spin-box/", usage: readFileSync(join(__dirname, "../../static/widgets/spin-box/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: translate("joystick2D"), intro: translate("joystick2DIntro"), videoLink: "https://www.bilibili.com/video/BV1LP4y1W73z/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/joystick2D/", usage: readFileSync(join(__dirname, "../../static/widgets/joystick2D/usage.html"), "utf-8")},
-                        {widgetId: 3, widgetName: translate("joystick3D"), intro: translate("joystick3DIntro"), videoLink: "https://www.bilibili.com/video/BV1w64y1Y7Xm/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/joystick3D/", usage: readFileSync(join(__dirname, "../../static/widgets/joystick3D/usage.html"), "utf-8")},
+                    {categoryId: 1, categoryName: translate("shader"), widgets: [
+                        {widgetId: 0, widgetName: translate("aging"), intro: translate("agingIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-aging/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/aging/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: translate("frozen"), intro: translate("frozenIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-frozen/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/frozen/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: translate("poisonous"), intro: translate("poisonousIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-poisonous/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/poisonous/usage.html"), "utf-8")},
                     ]},
-                    {categoryId: 2, categoryName: translate("sprite"), widgets: [
-                        {widgetId: 0, widgetName: translate("movingBackground"), intro: translate("movingBackgroundIntro"), videoLink: "https://www.bilibili.com/video/BV1a64y1e7Wz/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/moving-background/", usage: readFileSync(join(__dirname, "../../static/widgets/moving-background/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: translate("magnifier"), intro: translate("magnifierIntro"), videoLink: "https://www.bilibili.com/video/BV1sL4y1a7Rq/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/magnifier/", usage: readFileSync(join(__dirname, "../../static/widgets/magnifier/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: translate("phantom"), intro: translate("phantomIntro"), videoLink: "https://www.bilibili.com/video/BV19b4y1y7E4/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/phantom/", usage: readFileSync(join(__dirname, "../../static/widgets/phantom/usage.html"), "utf-8")},
-                    ]},
-                    {categoryId: 3, categoryName: translate("view"), widgets: [
-                        {widgetId: 0, widgetName: translate("zoomView"), intro: translate("zoomViewIntro"), videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/zoom-view/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: translate("beginnerGuide"), intro: translate("beginnerGuideIntro"), videoLink: "https://www.bilibili.com/video/BV1g64y1e7R6/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/beginner-guide/", usage: readFileSync(join(__dirname, "../../static/widgets/beginner-guide/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: translate("2Dfollow3D"), intro: translate("2Dfollow3DIntro"), videoLink: "https://www.bilibili.com/video/BV1nU4y177Qh/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/2D-follow-3D/", usage: readFileSync(join(__dirname, "../../static/widgets/2D-follow-3D/usage.html"), "utf-8")},
-                        {widgetId: 3, widgetName: translate("2Dfollow2D"), intro: translate("2Dfollow2DIntro"), videoLink: "https://www.bilibili.com/video/BV1mL4y1q7vG/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/2D-follow-2D/", usage: readFileSync(join(__dirname, "../../static/widgets/2D-follow-2D/usage.html"), "utf-8")}
-                    ]},
-                    {categoryId: 4, categoryName: translate("3Dmodel"), widgets: [
-                        {widgetId: 0, widgetName: translate("pickStarMonster"), intro: translate("pickStarMonsterIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/pick-star-monster-3Dmodel/", usage: "" },
-                        {widgetId: 1, widgetName: translate("star"), intro: translate("starIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/star-3Dmodel/", usage: "" },
-                        {widgetId: 2, widgetName: translate("heart"), intro: translate("heartIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/heart-3Dmodel/", usage: "" },
-                        {widgetId: 3, widgetName: translate("dice"), intro: translate("diceIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/dice-3Dmodel/", usage: "" },
-                        {widgetId: 4, widgetName: translate("football"), intro: translate("footballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/football-3Dmodel/", usage: "" },
-                        {widgetId: 5, widgetName: translate("cartoonTree"), intro: translate("cartoonTreeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/cartoon-tree-3Dmodel/", usage: "" },
-                        {widgetId: 6, widgetName: translate("basketball"), intro: translate("basketballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/basketball-3Dmodel/", usage: "" },
-                        {widgetId: 7, widgetName: translate("axe"), intro: translate("axeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/axe-3Dmodel/", usage: "" },
+                    {categoryId: 2, categoryName: translate("3Dmodel"), widgets: [
+                        {widgetId: 0, widgetName: translate("axe"), intro: translate("axeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/axe-3Dmodel/", usage: "" },
+                        {widgetId: 1, widgetName: translate("basketball"), intro: translate("basketballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/basketball-3Dmodel/", usage: "" },
+                        {widgetId: 2, widgetName: translate("bat"), intro: translate("batIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/bat-3Dmodel/", usage: "" },
+                        {widgetId: 3, widgetName: translate("cartoonTree"), intro: translate("cartoonTreeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/cartoon-tree-3Dmodel/", usage: "" },
+                        {widgetId: 4, widgetName: translate("dice"), intro: translate("diceIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/dice-3Dmodel/", usage: "" },
+                        {widgetId: 5, widgetName: translate("football"), intro: translate("footballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/football-3Dmodel/", usage: "" },
+                        {widgetId: 6, widgetName: translate("heart"), intro: translate("heartIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/heart-3Dmodel/", usage: "" },
+                        {widgetId: 7, widgetName: translate("pickStarMonster"), intro: translate("pickStarMonsterIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/pick-star-monster-3Dmodel/", usage: "" },
                         {widgetId: 8, widgetName: translate("shield"), intro: translate("shieldIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shield-3Dmodel/", usage: "" },
-                        {widgetId: 9, widgetName: translate("bat"), intro: translate("batIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/bat-3Dmodel/", usage: "" },
+                        {widgetId: 9, widgetName: translate("star"), intro: translate("starIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/star-3Dmodel/", usage: "" },
                     ]},
                 ],
             }
@@ -133,97 +131,102 @@ exports.ready = function() {
                 This will mess up the script in assets. So, I need to pass the widget name explicitly.
                 */
                 switch (widgetName) {
-                    /* Label */
+                    /* Component */
                     case this.allWidgets[0].widgets[0].widgetName:
-                        Typer.create("Typer");
+                        BeginnerGuide.create("BeginnerGuide");
                         break;
                     case this.allWidgets[0].widgets[1].widgetName:
                         BulletScreen.create("BulletScreen");
                         break;
                     case this.allWidgets[0].widgets[2].widgetName:
-                        RollingNumber.create("RollingNumber");
-                        break;
-                    case this.allWidgets[0].widgets[3].widgetName:
-                        Tooltip.create("Tooltip");
-                        break;
-
-                    /* Button */
-                    case this.allWidgets[1].widgets[0].widgetName:
                         ComboBox.create("ComboBox");
                         break;
-                    case this.allWidgets[1].widgets[1].widgetName:
-                        SpinBox.create("SpinBox");
-                        break;
-                    case this.allWidgets[1].widgets[2].widgetName:
+                    case this.allWidgets[0].widgets[3].widgetName:
                         Joystick2D.create("Joystick2D");
                         break;
-                    case this.allWidgets[1].widgets[3].widgetName:
+                    case this.allWidgets[0].widgets[4].widgetName:
                         Joystick3D.create("Joystick3D");
                         break;
-
-                    /* Sprite */
-                    case this.allWidgets[2].widgets[0].widgetName:
-                        MovingBackground.create("MovingBackground");
-                        break;
-                    case this.allWidgets[2].widgets[1].widgetName:
+                    case this.allWidgets[0].widgets[5].widgetName:
                         Magnifier.create("Magnifier");
                         break;
-                    case this.allWidgets[2].widgets[2].widgetName:
+                    case this.allWidgets[0].widgets[6].widgetName:
+                        MovingBackground.create("MovingBackground");
+                        break;
+                    case this.allWidgets[0].widgets[7].widgetName:
                         Phantom.create("Phantom");
                         break;
-    
-                    /* View */
-                    case this.allWidgets[3].widgets[0].widgetName:
+                    case this.allWidgets[0].widgets[8].widgetName:
+                        RollingNumber.create("RollingNumber");
+                        break;
+                    case this.allWidgets[0].widgets[9].widgetName:
+                        SpinBox.create("SpinBox");
+                        break;
+                    case this.allWidgets[0].widgets[10].widgetName:
+                        Tooltip.create("Tooltip");
+                        break;
+                    case this.allWidgets[0].widgets[11].widgetName:
+                        Typer.create("Typer");
+                        break;
+                    case this.allWidgets[0].widgets[12].widgetName:
                         ZoomView.create("ZoomView");
                         break;
-                    case this.allWidgets[3].widgets[1].widgetName:
-                        BeginnerGuide.create("BeginnerGuide");
-                        break;
-                    case this.allWidgets[3].widgets[2].widgetName:
-                        _2DFollow3D.create("2DFollow3D");
-                        break;
-                    case this.allWidgets[3].widgets[3].widgetName:
+                    case this.allWidgets[0].widgets[13].widgetName:
                         _2DFollow2D.create("2DFollow2D");
                         break;
-
+                    case this.allWidgets[0].widgets[14].widgetName:
+                        _2DFollow3D.create("2DFollow3D");
+                        break;
+                        
+                    /* Shader */ 
+                    case this.allWidgets[1].widgets[0].widgetName:
+                        Aging.create("Aging");
+                        break;
+                    case this.allWidgets[1].widgets[1].widgetName:
+                        Frozen.create("Frozen");
+                        break;
+                    case this.allWidgets[1].widgets[2].widgetName:
+                        Poisonous.create("Poisonous");
+                        break;
+                        
                     /* 3D Model */
-                    case this.allWidgets[4].widgets[0].widgetName:
-                        Model.create("PickStarMonster");
-                        break;
-                    case this.allWidgets[4].widgets[1].widgetName:
-                        Model.create("Star");
-                        break;
-                    case this.allWidgets[4].widgets[2].widgetName:
-                        Model.create("Heart");
-                        break;
-                    case this.allWidgets[4].widgets[3].widgetName:
-                        Model.create("Dice");
-                        break;
-                    case this.allWidgets[4].widgets[4].widgetName:
-                        Model.create("Football");
-                        break;
-                    case this.allWidgets[4].widgets[5].widgetName:
-                        Model.create("CartoonTree");
-                        break;
-                    case this.allWidgets[4].widgets[6].widgetName:
-                        Model.create("Basketball");
-                        break;
-                    case this.allWidgets[4].widgets[7].widgetName:
+                    case this.allWidgets[2].widgets[0].widgetName:
                         Model.create("Axe");
                         break;
-                    case this.allWidgets[4].widgets[8].widgetName:
+                    case this.allWidgets[2].widgets[1].widgetName:
+                        Model.create("Bat");
+                        break;
+                    case this.allWidgets[2].widgets[2].widgetName:
+                        Model.create("Basketball");
+                        break;
+                    case this.allWidgets[2].widgets[3].widgetName:
+                        Model.create("CartoonTree");
+                        break;
+                    case this.allWidgets[2].widgets[4].widgetName:
+                        Model.create("Dice");
+                        break;
+                    case this.allWidgets[2].widgets[5].widgetName:
+                        Model.create("Football");
+                        break;
+                    case this.allWidgets[2].widgets[6].widgetName:
+                        Model.create("Heart");
+                        break;
+                    case this.allWidgets[2].widgets[7].widgetName:
+                        Model.create("PickStarMonster");
+                        break;
+                    case this.allWidgets[2].widgets[8].widgetName:
                         Model.create("Shield");
                         break;
-                    case this.allWidgets[4].widgets[9].widgetName:
-                        Model.create("Bat");
+                    case this.allWidgets[2].widgets[9].widgetName:
+                        Model.create("Star");
                         break;
                 }
             },
 
             /* In development */
-            showSettings() {
-                Editor.Panel.open(`${packageJSON.name}.settings`);
-            }
+            // showSettings() {
+            //     Editor.Panel.open(`${packageJSON.name}.settings`);
+            // }
         },
     })
 };
