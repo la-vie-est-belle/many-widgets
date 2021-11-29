@@ -25,6 +25,8 @@ const _2DFollow3D = require('../../static/widgets/components/2D-follow-3D/method
 /* Shader */
 const Aging = require('../../static/widgets/shaders/aging/methods');
 const Frozen = require('../../static/widgets/shaders/frozen/methods');
+const Gray = require('../../static/widgets/shaders/gray/methods');
+const Inverse = require('../../static/widgets/shaders/inverse/methods');
 const Poisonous = require('../../static/widgets/shaders/poisonous/methods');
 
 /* 3D Model */
@@ -86,7 +88,9 @@ exports.ready = function() {
                     {categoryId: 1, categoryName: translate("shader"), widgets: [
                         {widgetId: 0, widgetName: translate("aging"), intro: translate("agingIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-aging/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/aging/usage.html"), "utf-8")},
                         {widgetId: 1, widgetName: translate("frozen"), intro: translate("frozenIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-frozen/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/frozen/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: translate("poisonous"), intro: translate("poisonousIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-poisonous/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/poisonous/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: translate("gray"), intro: translate("grayIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-gray/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/gray/usage.html"), "utf-8")},
+                        {widgetId: 3, widgetName: translate("inverse"), intro: translate("inverseIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-inverse/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/inverse/usage.html"), "utf-8")},
+                        {widgetId: 4, widgetName: translate("poisonous"), intro: translate("poisonousIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-poisonous/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/poisonous/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 2, categoryName: translate("3Dmodel"), widgets: [
                         {widgetId: 0, widgetName: translate("axe"), intro: translate("axeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/axe-3Dmodel/", usage: "" },
@@ -96,9 +100,12 @@ exports.ready = function() {
                         {widgetId: 4, widgetName: translate("dice"), intro: translate("diceIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/dice-3Dmodel/", usage: "" },
                         {widgetId: 5, widgetName: translate("football"), intro: translate("footballIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/football-3Dmodel/", usage: "" },
                         {widgetId: 6, widgetName: translate("heart"), intro: translate("heartIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/heart-3Dmodel/", usage: "" },
-                        {widgetId: 7, widgetName: translate("pickStarMonster"), intro: translate("pickStarMonsterIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/pick-star-monster-3Dmodel/", usage: "" },
-                        {widgetId: 8, widgetName: translate("shield"), intro: translate("shieldIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shield-3Dmodel/", usage: "" },
-                        {widgetId: 9, widgetName: translate("star"), intro: translate("starIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/star-3Dmodel/", usage: "" },
+                        {widgetId: 7, widgetName: translate("kitchenKnife"), intro: translate("kitchenKnifeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/kitchen-knife-3Dmodel/", usage: "" },
+                        {widgetId: 8, widgetName: translate("pickStarMonster"), intro: translate("pickStarMonsterIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/pick-star-monster-3Dmodel/", usage: "" },
+                        {widgetId: 9, widgetName: translate("rubik'sCube"), intro: translate("rubik'sCubeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/rubik-cube-3Dmodel/", usage: "" },
+                        {widgetId: 10, widgetName: translate("shield"), intro: translate("shieldIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shield-3Dmodel/", usage: "" },
+                        {widgetId: 11, widgetName: translate("star"), intro: translate("starIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/star-3Dmodel/", usage: "" },
+                        {widgetId: 12, widgetName: translate("sword"), intro: translate("swordIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/sword-3Dmodel/", usage: "" },
                     ]},
                 ],
             }
@@ -186,6 +193,12 @@ exports.ready = function() {
                         Frozen.create("Frozen");
                         break;
                     case this.allWidgets[1].widgets[2].widgetName:
+                        Gray.create("Gray");
+                        break;
+                    case this.allWidgets[1].widgets[3].widgetName:
+                        Inverse.create("Inverse");
+                        break;
+                    case this.allWidgets[1].widgets[4].widgetName:
                         Poisonous.create("Poisonous");
                         break;
                         
@@ -212,13 +225,22 @@ exports.ready = function() {
                         Model.create("Heart");
                         break;
                     case this.allWidgets[2].widgets[7].widgetName:
-                        Model.create("PickStarMonster");
+                        Model.create("KitchenKnife");
                         break;
                     case this.allWidgets[2].widgets[8].widgetName:
-                        Model.create("Shield");
+                        Model.create("PickStarMonster");
                         break;
                     case this.allWidgets[2].widgets[9].widgetName:
+                        Model.create("Rubik'sCube");
+                        break;
+                    case this.allWidgets[2].widgets[10].widgetName:
+                        Model.create("Shield");
+                        break;
+                    case this.allWidgets[2].widgets[11].widgetName:
                         Model.create("Star");
+                        break;
+                    case this.allWidgets[2].widgets[12].widgetName:
+                        Model.create("Sword");
                         break;
                 }
             },

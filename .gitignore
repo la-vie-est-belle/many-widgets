@@ -1,3 +1,5 @@
 .DS_Store
 /static/widgets/models
 /static/widgets/shaders
+/static/components/phantom
+/static/components/beginner-guide

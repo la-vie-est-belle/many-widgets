@@ -6,7 +6,7 @@ This is a handy plugin that helps you create cocos creator widgets with special 
 Supported Cocos Creator version: 3.x.
 > Cocos Store: https://store.cocos.com/app/detail/3147
 
-> Coocs Forum: https://forum.cocos.org/t/topic/119564
+> Coocs Forum: https://forum.cocos.org/t/topic/125552
 
 <br/>
 
@@ -33,6 +33,8 @@ Supported Cocos Creator version: 3.x.
 1. Aging
 2. Frozen
 3. Poisonous
+4. Gray
+5. Inverse
 
 <br/>
 
@@ -47,6 +49,9 @@ Supported Cocos Creator version: 3.x.
 8. Axe
 9. Shield
 10. Bat
+11. Sword
+12. Kitchen Knife
+13. Rubik's Cube
 
 <br>
 
@@ -124,6 +129,12 @@ Supported Cocos Creator version: 3.x.
 3. Poisonous
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-poisonous/
 
+4. Gray
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-gray/
+
+5. Inverse
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-inverse/
+
 <br/>
 <br/>
 
@@ -157,6 +168,15 @@ Supported Cocos Creator version: 3.x.
 
 10. Bat
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/bat-3Dmodel/
+
+11. Sword
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/sword-3Dmodel/
+
+12. Kitchen Knife
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/kitchen-knife-3Dmodel/
+
+13. Rubik's Cube
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/rubik-cube-3Dmodel/
 
 <br/>
 <br/>

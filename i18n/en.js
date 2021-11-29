@@ -101,23 +101,33 @@ module.exports = {
 
     /* Shader */  
     "shader": "Shader",
+    "shaderStep3": "To change the effect in your code:",
+
     "aging": "Aging",
     "agingIntro": "Make a photo aging.",
     "agingStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Aging effect</strong> and the <strong style='color:#f90'>MW_Aging material</strong> in the assets.",
     "agingStep2": "Click the material and choose MW_Aging as the effect. Then make MW_Aging material the custom material of a sprite. Now you can see the aging effect by changing the <strong style='color:#f90'>agingThreshold</strong>.",
-    "agingStep3": "To change the effect in your code:",
 
     "frozen": "Frozen",
     "frozenIntro": "It is too cold.",
     "frozenStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Frozen effect</strong> and the <strong style='color:#f90'>MW_Frozen material</strong> in the assets.",
     "frozenStep2": "Click the material and choose MW_Frozen as the effect. Then make MW_Frozen material the custom material of a sprite. Now you can see the frozen effect by changing the <strong style='color:#f90'>frozenThreshold</strong>.",
-    "frozenStep3": "To change the effect in your code:",
+
+    "gray": "Gray",
+    "grayIntro": "Gray is beautiful, too.",
+    "grayStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Gray effect</strong> and the <strong style='color:#f90'>MW_Gray material</strong> in the assets.",
+    "grayStep2": "Click the material and choose MW_Gray as the effect. Then make MW_Gray material the custom material of a sprite. Now you can see the gray effect by changing the <strong style='color:#f90'>grayThreshold</strong>.",
+
+    "inverse": "Inverse",
+    "inverseIntro": "Make it different.",
+    "inverseStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Inverse effect</strong> and the <strong style='color:#f90'>MW_Inverse material</strong> in the assets.",
+    "inverseStep2": "Click the material and choose MW_Inverse as the effect. Then make MW_Inverse material the custom material of a sprite. Now you can see the inverse effect by changing the <strong style='color:#f90'>inverseThreshold</strong>.",
+
 
     "poisonous": "Poisonous",
     "poisonousIntro": "You put poison in your code...",
     "poisonousStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Poisonous effect</strong> and the <strong style='color:#f90'>MW_Poisonous material</strong> in the assets.",
     "poisonousStep2": "Click the material and choose MW_Poisonous as the effect. Then make MW_Poisonous material the custom material of a sprite. Now you can see the poisonous effect by changing the <strong style='color:#f90'>poisonousThreshold</strong>.",
-    "poisonousStep3": "To change the effect in your code:",
 
     /* 3D Model */  
     "3Dmodel": "3D Model",
@@ -141,13 +151,22 @@ module.exports = {
 
     "heart": "Heart",
     "heartIntro": "Love you 3000.",
+    
+    "kitchenKnife": "Kitchen Knife",
+    "kitchenKnifeIntro": "Do you cook?",
 
     "pickStarMonster": "Pick Star Monster",
     "pickStarMonsterIntro": "The purple monster in the pick star game.",
+
+    "rubik'sCube": "Rubik's Cube",
+    "rubik'sCubeIntro": "How fast can you solve it?",
 
     "shield": "Shield",
     "shieldIntro": "Protect yourself.",
 
     "star": "Star",
     "starIntro": "A star with five points.",
+
+    "sword": "Sword",
+    "swordIntro": "I stand for justice.",
 }

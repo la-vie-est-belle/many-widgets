@@ -101,23 +101,32 @@ module.exports = {
 
     /* Shader */  
     "shader": "着色器",
+    "shaderStep3": "在代码中改变效果：",
+
     "aging": "老化",
     "agingIntro": "让照片老旧化。",
     "agingStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Aging 效果文件</strong>以及<strong style='color:#f90'>MW_Aging 材质</strong>。",
     "agingStep2": "点击材质并将MW_Aging选为效果，接着让MW_Aging材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>agingThreshold</strong>的值就可以看到老化效果了。",
-    "agingStep3": "在代码中改变效果：",
+
+    "gray": "灰色",
+    "grayIntro": "灰色也很美。",
+    "grayStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Gray 效果文件</strong>以及<strong style='color:#f90'>MW_Gray 材质</strong>。",
+    "grayStep2": "点击材质并将MW_Gray选为效果，接着让MW_Gray材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>grayThreshold</strong>的值就可以看到灰色效果了。",
 
     "frozen": "冰冻",
     "frozenIntro": "太冷了。",
     "frozenStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Frozen 效果文件</strong>以及<strong style='color:#f90'>MW_Frozen 材质</strong>。",
     "frozenStep2": "点击材质并将MW_Frozen选为效果，接着让MW_Frozen材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>frozenThreshold</strong>的值就可以看到冰冻效果了。",
-    "frozenStep3": "在代码中改变效果：",
+
+    "inverse": "反色",
+    "inverseIntro": "使其变得不同。",
+    "inverseStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Inverse 效果文件</strong>以及<strong style='color:#f90'>MW_Inverse 材质</strong>。",
+    "inverseStep2": "点击材质并将MW_Inverse选为效果，接着让MW_Inverse材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>inverseThreshold</strong>的值就可以看到反色效果了。",
 
     "poisonous": "中毒",
     "poisonousIntro": "你竟然在代码里下毒。。。",
     "poisonousStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Poisonous 效果文件</strong>以及<strong style='color:#f90'>MW_Poisonous 材质</strong>。",
     "poisonousStep2": "点击材质并将MW_Poisonous选为效果，接着让MW_Poisonous材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>poisonousThreshold</strong>的值就可以看到中毒效果了。",
-    "poisonousStep3": "在代码中改变效果：",
 
     /* 3D Model */
     "3Dmodel": "3D 模型",
@@ -142,12 +151,21 @@ module.exports = {
     "heart": "爱心",
     "heartIntro": "爱你3000遍。",
 
+    "kitchenKnife": "菜刀",
+    "kitchenKnifeIntro": "你做饭吗？",
+
     "pickStarMonster": "摘星星的怪物",
     "pickStarMonsterIntro": "在摘星星游戏里面的紫色怪物。",
+
+    "rubik'sCube": "魔方",
+    "rubik'sCubeIntro": "你能拼多快？",
 
     "shield": "盾牌",
     "shieldIntro": "保护好自己。",
 
     "star": "星星",
     "starIntro": "黄色五角星。",
+
+    "sword": "剑",
+    "swordIntro": "我代表正义。",
 }

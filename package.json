@@ -1,8 +1,8 @@
 {
     "name": "many-widgets",
     "package_version": 2,
-    "version": "1.10.0",
-    "description": "Here are many widgets for you. :)",
+    "version": "1.1.1",
+    "description": "Make your game development faster.",
     "author": "ren_meng",
     "main": "browser.js",
 
