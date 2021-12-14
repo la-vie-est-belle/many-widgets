@@ -108,6 +108,11 @@ module.exports = {
     "agingStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Aging effect</strong> and the <strong style='color:#f90'>MW_Aging material</strong> in the assets.",
     "agingStep2": "Click the material and choose MW_Aging as the effect. Then make MW_Aging material the custom material of a sprite. Now you can see the aging effect by changing the <strong style='color:#f90'>agingThreshold</strong>.",
 
+    "blur": "Blur",
+    "blurIntro": "High mypio...",
+    "blurStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Blur effect</strong> and the <strong style='color:#f90'>MW_Blur material</strong> in the assets.",
+    "blurStep2": "Click the material and choose MW_Blur as the effect. Then make MW_Blur material the custom material of a sprite. Now you can see the blur effect by changing the <strong style='color:#f90'>blurThreshold</strong>.",
+
     "frozen": "Frozen",
     "frozenIntro": "It is too cold.",
     "frozenStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Frozen effect</strong> and the <strong style='color:#f90'>MW_Frozen material</strong> in the assets.",
@@ -123,11 +128,20 @@ module.exports = {
     "inverseStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Inverse effect</strong> and the <strong style='color:#f90'>MW_Inverse material</strong> in the assets.",
     "inverseStep2": "Click the material and choose MW_Inverse as the effect. Then make MW_Inverse material the custom material of a sprite. Now you can see the inverse effect by changing the <strong style='color:#f90'>inverseThreshold</strong>.",
 
-
     "poisonous": "Poisonous",
     "poisonousIntro": "You put poison in your code...",
     "poisonousStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Poisonous effect</strong> and the <strong style='color:#f90'>MW_Poisonous material</strong> in the assets.",
     "poisonousStep2": "Click the material and choose MW_Poisonous as the effect. Then make MW_Poisonous material the custom material of a sprite. Now you can see the poisonous effect by changing the <strong style='color:#f90'>poisonousThreshold</strong>.",
+
+    "relief": "Relief",
+    "reliefIntro": "This is art...",
+    "reliefStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Relief effect</strong> and the <strong style='color:#f90'>MW_Relief material</strong> in the assets.",
+    "reliefStep2": "Click the material and choose MW_Relief as the effect. Then make MW_Relief material the custom material of a sprite. Now you can see the relief effect by changing the <strong style='color:#f90'>reliefThreshold</strong>.",
+
+    "sharpen": "Sharpen",
+    "sharpenIntro": "Stay sharp.",
+    "sharpenStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Sharpen effect</strong> and the <strong style='color:#f90'>MW_Sharpen material</strong> in the assets.",
+    "sharpenStep2": "Click the material and choose MW_Sharpen as the effect. Then make MW_Sharpen material the custom material of a sprite. Now you can see the sharpen effect by changing the <strong style='color:#f90'>sharpenThreshold</strong>.",
 
     /* 3D Model */  
     "3Dmodel": "3D Model",

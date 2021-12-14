@@ -28,6 +28,9 @@ const Frozen = require('../../static/widgets/shaders/frozen/methods');
 const Gray = require('../../static/widgets/shaders/gray/methods');
 const Inverse = require('../../static/widgets/shaders/inverse/methods');
 const Poisonous = require('../../static/widgets/shaders/poisonous/methods');
+const Relief = require('../../static/widgets/shaders/relief/methods');
+const Sharpen = require('../../static/widgets/shaders/sharpen/methods');
+const Blur = require('../../static/widgets/shaders/blur/methods');
 
 /* 3D Model */
 const Model = require('../../static/widgets/models/methods');
@@ -87,10 +90,13 @@ exports.ready = function() {
                     ]},
                     {categoryId: 1, categoryName: translate("shader"), widgets: [
                         {widgetId: 0, widgetName: translate("aging"), intro: translate("agingIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-aging/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/aging/usage.html"), "utf-8")},
-                        {widgetId: 1, widgetName: translate("frozen"), intro: translate("frozenIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-frozen/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/frozen/usage.html"), "utf-8")},
-                        {widgetId: 2, widgetName: translate("gray"), intro: translate("grayIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-gray/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/gray/usage.html"), "utf-8")},
-                        {widgetId: 3, widgetName: translate("inverse"), intro: translate("inverseIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-inverse/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/inverse/usage.html"), "utf-8")},
-                        {widgetId: 4, widgetName: translate("poisonous"), intro: translate("poisonousIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-poisonous/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/poisonous/usage.html"), "utf-8")},
+                        {widgetId: 1, widgetName: translate("blur"), intro: translate("blurIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-blur/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/blur/usage.html"), "utf-8")},
+                        {widgetId: 2, widgetName: translate("frozen"), intro: translate("frozenIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-frozen/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/frozen/usage.html"), "utf-8")},
+                        {widgetId: 3, widgetName: translate("gray"), intro: translate("grayIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-gray/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/gray/usage.html"), "utf-8")},
+                        {widgetId: 4, widgetName: translate("inverse"), intro: translate("inverseIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-inverse/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/inverse/usage.html"), "utf-8")},
+                        {widgetId: 5, widgetName: translate("poisonous"), intro: translate("poisonousIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-poisonous/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/poisonous/usage.html"), "utf-8")},
+                        {widgetId: 6, widgetName: translate("relief"), intro: translate("reliefIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-relief/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/relief/usage.html"), "utf-8")},
+                        {widgetId: 7, widgetName: translate("sharpen"), intro: translate("sharpenIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-sharpen", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/sharpen/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 2, categoryName: translate("3Dmodel"), widgets: [
                         {widgetId: 0, widgetName: translate("axe"), intro: translate("axeIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/axe-3Dmodel/", usage: "" },
@@ -190,18 +196,27 @@ exports.ready = function() {
                         Aging.create("Aging");
                         break;
                     case this.allWidgets[1].widgets[1].widgetName:
-                        Frozen.create("Frozen");
+                        Blur.create("Blur");
                         break;
                     case this.allWidgets[1].widgets[2].widgetName:
-                        Gray.create("Gray");
+                        Frozen.create("Frozen");
                         break;
                     case this.allWidgets[1].widgets[3].widgetName:
-                        Inverse.create("Inverse");
+                        Gray.create("Gray");
                         break;
                     case this.allWidgets[1].widgets[4].widgetName:
+                        Inverse.create("Inverse");
+                        break;
+                    case this.allWidgets[1].widgets[5].widgetName:
                         Poisonous.create("Poisonous");
                         break;
-                        
+                    case this.allWidgets[1].widgets[6].widgetName:
+                        Relief.create("Relief");
+                        break;
+                    case this.allWidgets[1].widgets[7].widgetName:
+                        Sharpen.create("Sharpen");
+                        break;    
+                    
                     /* 3D Model */
                     case this.allWidgets[2].widgets[0].widgetName:
                         Model.create("Axe");

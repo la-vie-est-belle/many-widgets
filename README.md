@@ -35,6 +35,9 @@ Supported Cocos Creator version: 3.x.
 3. Poisonous
 4. Gray
 5. Inverse
+6. Blur
+7. Sharpen
+8. Relief
 
 <br/>
 
@@ -134,6 +137,15 @@ Supported Cocos Creator version: 3.x.
 
 5. Inverse
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-inverse/
+
+6. Blur
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-blur/
+
+7. Sharpen
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-sharpen/
+
+8. Relief
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shader-relief/
 
 <br/>
 <br/>

@@ -108,6 +108,11 @@ module.exports = {
     "agingStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Aging 效果文件</strong>以及<strong style='color:#f90'>MW_Aging 材质</strong>。",
     "agingStep2": "点击材质并将MW_Aging选为效果，接着让MW_Aging材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>agingThreshold</strong>的值就可以看到老化效果了。",
 
+    "blur": "模糊",
+    "blurIntro": "高度近视。。。",
+    "blurStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Blur 效果文件</strong>以及<strong style='color:#f90'>MW_Blur 材质</strong>。",
+    "blurStep2": "点击材质并将MW_Blur选为效果，接着让MW_Blur材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>blurThreshold</strong>的值就可以看到模糊效果了。",
+
     "gray": "灰色",
     "grayIntro": "灰色也很美。",
     "grayStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Gray 效果文件</strong>以及<strong style='color:#f90'>MW_Gray 材质</strong>。",
@@ -127,6 +132,16 @@ module.exports = {
     "poisonousIntro": "你竟然在代码里下毒。。。",
     "poisonousStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Poisonous 效果文件</strong>以及<strong style='color:#f90'>MW_Poisonous 材质</strong>。",
     "poisonousStep2": "点击材质并将MW_Poisonous选为效果，接着让MW_Poisonous材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>poisonousThreshold</strong>的值就可以看到中毒效果了。",
+
+    "relief": "浮雕",
+    "reliefIntro": "这是艺术。。。",
+    "reliefStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Relief 效果文件</strong>以及<strong style='color:#f90'>MW_Relief 材质</strong>。",
+    "reliefStep2": "点击材质并将MW_Relief选为效果，接着让MW_Relief材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>reliefThreshold</strong>的值就可以看到浮雕效果了。",
+
+    "sharpen": "锐化",
+    "sharpenIntro": "保持清醒。",
+    "sharpenStep1": "点击使用按钮后，你可以在资源管理器中看到<strong style='color:#f90'>MW_Sharpen 效果文件</strong>以及<strong style='color:#f90'>MW_Sharpen 材质</strong>。",
+    "sharpenStep2": "点击材质并将MW_Sharpen选为效果，接着让MW_Sharpen材质成为精灵节点的自定义材质。现在通过改变<strong style='color:#f90'>sharpenThreshold</strong>的值就可以看到锐化效果了。",
 
     /* 3D Model */
     "3Dmodel": "3D 模型",
