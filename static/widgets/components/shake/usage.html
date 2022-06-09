@@ -1,0 +1,41 @@
+<html>
+    <header>
+        <style>
+            p {
+                text-align: justify;
+            }
+        </style>
+    </header>
+
+    <body>
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step1"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.shakeStep1"></ui-label></p>
+        </div>
+        <br />
+        
+        <div>
+            <h3><ui-label value="i18n:many-widgets.step2"></ui-label>:</h3>
+            <p><ui-label value="i18n:many-widgets.shakeStep2"></ui-label></p>
+        </div>
+        <br />
+
+        <div>
+            <h3>API:</h3>
+            <ui-code language="typescript">
+                /*
+                Shake the target.
+                Pass "x" to shake to the left and right.
+                Pass "y" to shake to the top and bottom.
+                Pass "xy" to shake in all directions.
+                */
+                shake(target: Node, duration: number = 0.5, offset: number = 5, repeat: number = 1,  direction: string = "x")
+
+                /*
+                Stop shaking.
+                */
+                stopShaking()
+            </ui-code>
+        </div>
+    </body>
+</html>

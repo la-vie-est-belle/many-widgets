@@ -3,7 +3,7 @@ module.exports = {
     "open": "打开",
 
     /* 通用 */
-    "updateWarn": `Many Widgets新版本(包含Shader)已上线，快去Cocos商店下载吧。:)`,
+    "updateWarn": `Many Widgets新版本已上线，快去Cocos商店下载吧。:)`,
     "githubStar": "GitHub上标个星吧:)",
     "author": "© ren_meng",
     "use": "使用",
@@ -48,7 +48,7 @@ module.exports = {
     "magnifier": "放大镜",
     "magnifierIntro": "快速生成一个放大镜。",
     "magnifierStep1": "点击使用按钮后. 在层级窗口中可以发现一个<strong style='color:#f90'>MW Magnifier</strong>节点. 该节点是从资源管理器里的<strong style='color:#f90'>MW Magnifier</strong>预制中创建出来的。",
-    "magnifierStep2": "将MW Magnifier节点拖到Canvas节点下。如果没有Canvas节点的话，请创建一个。现在给MW Magnifier节点添加一张放大镜图片，图片是资源管理器中的<strong style='color:#f90'>magnifier png</strong>， 再把<strong style='color:#f90'>render-texture</strong>文件设置为摄像机的目标纹理。",
+    "magnifierStep2": "将MW Magnifier节点拖到Canvas节点下。如果没有Canvas节点的话，请创建一个。现在给MW Magnifier节点添加一张放大镜图片，图片是资源管理器中的<strong style='color:#f90'>magnifier png</strong>， 再把<strong style='color:#f90'>render-texture</strong>文件设置为摄像机的目标纹理。Cocos Creator 版本在3.5及以后的用户请把自动生成的render-texture文件删除，再通过右键菜单手动创建一个<strong style='color:#f90'>渲染纹理(Render Texture)</strong>文件作为替代即可，文件内容无需作任何修改。",
     "magnifierStep3": "运行项目就可以看到放大镜效果了，你还可以移动这个放大镜。",
 
     "movingBackground": "移动背景",
@@ -99,6 +99,11 @@ module.exports = {
     "2Dfollow3DStep2": "MW 2DFollow3D(初始时是空节点), 记得要将它拖到Canvas节点下，现在你可以给MW 2DFollow3D节点加上Label组件或者Progress Bar组件。",
     "2Dfollow3DStep3": "在其他脚本中，调用<strong style='color:#f90'>follow()</strong>方法让2D节点(调用者)跟随一个3D节点。",
 
+    "shake": "抖动",
+    "shakeIntro": "可用于屏幕或礼盒抖动。",
+    "shakeStep1": "点击使用按钮后，在在资源管理中有一个<strong style='color:#f90'>MW_Shake</strong>脚本。",
+    "shakeStep2": "将该脚本挂到某节点上，然后调用其中的<strong style='color:#f90'>shake()</strong>方法即可实现抖动效果。",
+   
     /* Shader */  
     "shader": "着色器",
     "shaderStep3": "在代码中改变效果：",

@@ -1,4 +1,6 @@
 {
+  "MW_note_zh": "Cocos Creator 版本在3.5及以后的用户请把自动生成的render-texture文件删除，再通过右键菜单手动创建一个渲染纹理(Render Texture)文件作为替代，文件内容无需作任何修改。",
+  "MW_note_en": "If you are using Cocos Creator 3.5 or newer, please delete this render-texture file and create one manually in replacement. No need to make any changes to the file.",
   "__type__": "cc.RenderTexture",
   "_name": "",
   "_objFlags": 0,

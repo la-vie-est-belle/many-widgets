@@ -26,6 +26,7 @@ Supported Cocos Creator version: 3.x.
 13. 2D Follow 2D (Use it on a tracking missile)
 14. Magnifier
 15. Phantom (trailing effect)
+16. Shake
 
 <br/>
 
@@ -118,6 +119,10 @@ Supported Cocos Creator version: 3.x.
 15. Phantom
 - project: https://la-vie-est-belle.github.io/many-widgets-demo/phantom/
 - video: https://www.bilibili.com/video/BV19b4y1y7E4/
+
+16. Shake
+- project: https://la-vie-est-belle.github.io/many-widgets-demo/shake/
+- video: https://www.bilibili.com/video/BV1J3411g7zm
 
 <br/>
 <br/>

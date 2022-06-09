@@ -1,9 +1,9 @@
 {
     "name": "many-widgets",
     "package_version": 2,
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "Make your game development faster.",
-    "author": "ren_meng",
+    "author": "la vie",
     "main": "browser.js",
 
     "panels": {

@@ -3,7 +3,7 @@ module.exports = {
     "open": "open",
 
     /* Common */
-    "updateWarn": `New version of Many Widgets (include shader) is on. Check it in Cocos Store now. :)`,
+    "updateWarn": `New version of Many Widgets is on. Check it in Cocos Store now. :)`,
     "githubStar": "Star me on GitHub :)",
     "author": "© ren_meng",
     "use": "Use",
@@ -48,7 +48,7 @@ module.exports = {
     "magnifier": "Magnifier",
     "magnifierIntro": "Quick set-up of a magnifying glass.",
     "magnifierStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW Magnifier node</strong> in the Hierarchy tab. This node is created from the <strong style='color:#f90'>MW Magnifier prefab</strong> in the assets.",
-    "magnifierStep2": "Drag the MW Magnifier node to under the Canvas. If there is no Canvas, please create one. Now, set the MW Magnifier's spriteframe with <strong style='color:#f90'>magnifier png</strong> in the assets, and set the Camera's target texture with the <strong style='color:#f90'>render-texture</strong>.",
+    "magnifierStep2": "Drag the MW Magnifier node to under the Canvas. If there is no Canvas, please create one. Now, set the MW Magnifier's spriteframe with <strong style='color:#f90'>magnifier png</strong> in the assets, and set the Camera's target texture with the <strong style='color:#f90'>render-texture</strong>. If you are using Cocos Creator 3.5 or newer, please delete this render-texture file and create one manually in replacement. No need to make any changes to the created file.",
     "magnifierStep3": "Run the project, and you will see the magnifying effect. You can also move the magnifier.",
 
     "movingBackground": "Moving Background",
@@ -98,6 +98,11 @@ module.exports = {
     "2Dfollow3DStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW 2DFollow3D node</strong> in the Hierarchy tab and the <strong style='color:#f90'>MW_2DFollow3D script</strong> in the assets.",
     "2Dfollow3DStep2": "MW 2DFollow3D node, which is empty, should be under the Canvas node. Now add the label component or progress bar component or any other 2D component you like onto MW 2DFollow3D node.",
     "2Dfollow3DStep3": "In your script, call <strong style='color:#f90'>follow()</strong> to let the 2D node (caller) follow a 3D node.",
+
+    "shake": "Shake",
+    "shakeIntro": "Shake screen or gift box.",
+    "shakeStep1": "Click the use button. Now you will find the <strong style='color:#f90'>MW_Shake script</strong> in the assets.",
+    "shakeStep2": "Drag the script onto one node，then call <strong style='color:#f90'>shake()</strong> to get the shaking effect.",
 
     /* Shader */  
     "shader": "Shader",

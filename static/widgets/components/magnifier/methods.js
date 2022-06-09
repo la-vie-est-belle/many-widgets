@@ -2,6 +2,7 @@ const { join } = require('path');
 const { readFileSync } = require('fs');
 const packageJSON = require('../../../../package.json');
 
+
 var Magnifier = {
     create: function(widgetName) {
         let self = this;
@@ -25,6 +26,8 @@ var Magnifier = {
     },
 
     createScript: function(widgetName) {
+        console.warn("Many Widgets放大镜效果：Cocos Creator 版本在3.5及以后的用户请把自动生成的render-texture文件删除，再通过右键菜单手动创建一个渲染纹理(Render Texture)文件作为替代即可，文件内容无需作任何修改。");
+        console.warn("Many Widgets Magnifier：If you are using Cocos Creator 3.5 or newer, please delete this render-texture file and create one manually in replacement. No need to make any changes to the created file.");
         let url = "db://assets/" + packageJSON.name + "/" + widgetName + "/" + "MW_" + widgetName + ".ts";
         let content = readFileSync(join(__dirname, "content.ts"), "utf-8");
         return Editor.Message.request("asset-db", "create-asset", url, content);

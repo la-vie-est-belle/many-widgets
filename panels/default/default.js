@@ -21,6 +21,7 @@ const Typer = require('../../static/widgets/components/typer/methods');
 const ZoomView = require('../../static/widgets/components/zoom-view/methods');
 const _2DFollow2D = require('../../static/widgets/components/2D-follow-2D/methods');
 const _2DFollow3D = require('../../static/widgets/components/2D-follow-3D/methods');
+const Shake = require('../../static/widgets/components/shake/methods');
 
 /* Shader */
 const Aging = require('../../static/widgets/shaders/aging/methods');
@@ -87,6 +88,7 @@ exports.ready = function() {
                         {widgetId: 12, widgetName: translate("zoomView"), intro: translate("zoomViewIntro"), videoLink: "https://www.bilibili.com/video/BV1BM4y1L7wT/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/zoom-view/", usage: readFileSync(join(__dirname, "../../static/widgets/components/zoom-view/usage.html"), "utf-8")},
                         {widgetId: 13, widgetName: translate("2Dfollow2D"), intro: translate("2Dfollow2DIntro"), videoLink: "https://www.bilibili.com/video/BV1mL4y1q7vG/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/2D-follow-2D/", usage: readFileSync(join(__dirname, "../../static/widgets/components/2D-follow-2D/usage.html"), "utf-8")},
                         {widgetId: 14, widgetName: translate("2Dfollow3D"), intro: translate("2Dfollow3DIntro"), videoLink: "https://www.bilibili.com/video/BV1nU4y177Qh/", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/2D-follow-3D/", usage: readFileSync(join(__dirname, "../../static/widgets/components/2D-follow-3D/usage.html"), "utf-8")},
+                        {widgetId: 15, widgetName: translate("shake"), intro: translate("shakeIntro"), videoLink: "https://www.bilibili.com/video/BV1J3411g7zm", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shake/", usage: readFileSync(join(__dirname, "../../static/widgets/components/shake/usage.html"), "utf-8")},
                     ]},
                     {categoryId: 1, categoryName: translate("shader"), widgets: [
                         {widgetId: 0, widgetName: translate("aging"), intro: translate("agingIntro"), videoLink: "", exampleLink: "https://la-vie.gitee.io/many-widgets-demo/shader-aging/", usage: readFileSync(join(__dirname, "../../static/widgets/shaders/aging/usage.html"), "utf-8")},
@@ -189,6 +191,9 @@ exports.ready = function() {
                         break;
                     case this.allWidgets[0].widgets[14].widgetName:
                         _2DFollow3D.create("2DFollow3D");
+                        break;
+                    case this.allWidgets[0].widgets[15].widgetName:
+                        Shake.create("Shake");
                         break;
                         
                     /* Shader */ 
